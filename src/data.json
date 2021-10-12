@@ -1,0 +1,50 @@
+{
+    "carouselList": [
+        {
+            "h5Url": "https://www.snimay.com/activity/details-347.shtml?source\u003d1069\u0026hd_name\u003d%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%93%E9%A2%98",
+            "name": "26800套餐",
+            "orderList": 2,
+            "id": 1262,
+            "pic": "https://image.snimay.com/20210628/28093821h4hy.jpg",
+            "position": 211,
+            "appletPic": "/20210628/28093827l4gr.jpg",
+            "url": "https://www.snimay.com/activity/details-347.shtml?source\u003d1069\u0026hd_name\u003d%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%93%E9%A2%98",
+            "status": 1
+        },
+        {
+            "h5Url": "https://www.snimay.com/activity/details-357.shtml",
+            "name": "小户型",
+            "orderList": 2,
+            "description": "小户型大家装 80㎡变100㎡！",
+            "id": 1270,
+            "pic": "https://image.snimay.com/20210906/061903267uxr.jpg",
+            "position": 211,
+            "appletPic": "/20210906/061903429saz.jpg",
+            "url": "https://www.snimay.com/activity/details-357.shtml?source\u003d1069\u0026hd_name\u003d%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%93%E9%A2%98",
+            "status": 1
+        },
+        {
+            "h5Url": "https://www.snimay.com/activity/details-289.shtml",
+            "name": "品质家 爱定制",
+            "orderList": 4,
+            "description": "",
+            "id": 1202,
+            "pic": "https://image.snimay.com/userfiles/images/1.Cheung00/xiaochengx0921banner.jpg",
+            "position": 211,
+            "appletPic": "/applet/indexBanner/20210129/9p8ygx.jpg",
+            "imageAlt": "",
+            "url": "https://www.snimay.com/activity/details-289.shtml",
+            "status": 1
+        },
+        {
+            "name": "设计大赛",
+            "orderList": 5,
+            "id": 1276,
+            "pic": "https://image.snimay.com/20210929/29143421xtww.jpg",
+            "position": 211,
+            "appletPic": "/20210929/29143425qze1.jpg",
+            "url": "https://www.snimay.com/activity/details-364.shtml",
+            "status": 1
+        }
+    ]
+}

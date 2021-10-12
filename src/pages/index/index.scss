@@ -1,0 +1,726 @@
+.index-container {
+    background: #f6f6f6;
+    padding-bottom: 20px;
+}
+
+.index-container .show {
+    top: -100rpx !important;
+}
+
+.index-container .mp-search-box {
+    position: static !important;
+    display: flex;
+}
+
+.index-container .mp-search-box .nearbyStore {
+    width: 30px;
+    height: 100%;
+    background-color: #f6f6f6;
+    margin-right: 15px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 70px;
+}
+
+.index-container .mp-search-box .nearbyStore .search_img {
+    width: 32px;
+    height: 60%;
+}
+
+.index-container .carousel-section .swiper {
+    height: 400px;
+}
+
+.index-container .carousel-section .navigator {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.index-container .carousel-section .navigator .img {
+    width: 100%;
+    height: 100%;
+}
+
+.index-container .index-nav {
+    padding: 58rpx 62rpx 39rpx 58px;
+}
+
+.index-container .index-nav .index-nav-box {
+    height: 130px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.index-container .index-nav .index-nav-box view {
+    width: 120px;
+    text-align: center;
+}
+
+.index-container .index-nav .index-nav-box view image {
+    width: 60px;
+    height: 60px;
+}
+
+.index-container .index-nav .index-nav-box view text {
+    display: block;
+    width: 100%;
+    margin-top: 4px;
+    font-family: SourceHanSansCN-Regular;
+    font-size: 22px;
+    color: #666;
+    text-align: center;
+    line-height: 30px;
+}
+
+.index-container .index-nav .index-nav-box view button:after {
+    border: none;
+}
+
+.index-container .index-nav .index-nav-box button {
+    padding-left: 0;
+    padding-right: 0;
+    box-sizing: border-box;
+    font-size: 22px;
+    text-align: center;
+    text-decoration: none;
+    line-height: 30px;
+    border-radius: 5px;
+}
+
+.index-container .hotPackage {
+    background: #fff;
+    margin-top: 10px;
+}
+
+.index-container .hotPackage .project-Title {
+    line-height: 100px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f6f6f6;
+    background: #fff;
+}
+
+.index-container .hotPackage .project-Title text {
+    font-size: 32px;
+    color: #333;
+}
+
+.index-container .hotPackage .project-Title .on {
+    width: 40px;
+    height: 40px;
+}
+
+.index-container .hotPackage .hotContent {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20rpx 20rpx 30px;
+}
+
+.index-container .hotPackage .hotContent .hotContent-children {
+    width: 224px;
+}
+
+.index-container .hotPackage .hotContent .hotContent-children image {
+    width: 100%;
+    height: 224px;
+    border-radius: 8px;
+}
+
+.index-container .hotPackage .hotContent .hotContent-children .title {
+    font-size: 24px;
+    color: #333;
+    line-height: 32px;
+    width: 100%;
+    height: 32px;
+    margin-top: 18px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+}
+
+.index-container .hotPackage .hotContent .hotContent-children .hot-moery {
+    font-size: 20px;
+    color: #e92124;
+    margin-top: 18px;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+}
+
+.index-container .hotPackage .hotContent .hotContent-children .hot-moery text:first-child {
+    font-size: 30px;
+}
+
+.index-container .hotPackage .hotContent .hotContent-children .hot-moery text:last-child {
+    font-size: 18px;
+    color: #999;
+    padding-left: 10px;
+}
+
+.index-container .hotPackage .hotContent .hotContent-children .hot-qianggou {
+    width: 120px;
+    height: 40px;
+    border-radius: 20px;
+    background: #e92124;
+    text-align: center;
+    line-height: 40px;
+    font-size: 22px;
+    color: #f6f6f6;
+    margin-top: 28px;
+}
+
+.index-container .hotPackage .hotContent .hotContent-children:nth-child(2) {
+    padding: 0 20px;
+}
+
+.index-container .projectTab {
+    background: #fff;
+    margin-top: 10px;
+}
+
+.index-container .projectTab .project-Title {
+    line-height: 100px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f6f6f6;
+    background: #fff;
+}
+
+.index-container .projectTab .project-Title text {
+    font-size: 32px;
+    color: #333;
+}
+
+.index-container .projectTab .project-Title .on {
+    width: 40px;
+    height: 40px;
+}
+
+.index-container .projectTab .wuc-tab-item {
+    height: 62rpx !important;
+    line-height: 42px;
+}
+
+.index-container .projectTab .swiper {
+    width: 100%;
+    height: 510px;
+}
+
+.index-container .projectTab .swiper .navigator-hover {
+    display: block;
+    width: 100%;
+    height: 510px;
+    opacity: 1;
+}
+
+.index-container .projectTab .swiper .navigator-hover image {
+    width: 100%;
+    height: 100%;
+}
+
+.index-container .projectTab .moreFangan {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.index-container .projectTab .moreFangan .children {
+    width: 370px;
+    height: 180px;
+    position: relative;
+}
+
+.index-container .projectTab .moreFangan .children image {
+    width: 100%;
+    height: 100%;
+    filter: brightness(60%);
+}
+
+.index-container .projectTab .moreFangan .children .vtolk {
+    display: block;
+    position: absolute;
+    width: 160px;
+    height: 32px;
+    line-height: 32px;
+    color: #fff;
+    font-size: 32px;
+    top: 50%;
+    left: 50%;
+    margin-top: -16px;
+    margin-left: -80px;
+    text-align: left;
+}
+
+.index-container .projectTab .moreFangan .children .vtolk image {
+    width: 24px;
+    height: 24px;
+    padding-left: 8px;
+    filter: brightness(100%);
+}
+
+.index-container .house-ruzhu {
+    margin-top: 20px;
+    background: #fff;
+}
+
+.index-container .house-ruzhu .project-Title {
+    line-height: 100px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f6f6f6;
+    background: #fff;
+}
+
+.index-container .house-ruzhu .project-Title text {
+    font-size: 32px;
+    color: #333;
+}
+
+.index-container .house-ruzhu .project-Title .on {
+    width: 40px;
+    height: 40px;
+}
+
+.index-container .home-dianqi {
+    margin-top: 20px;
+}
+
+.index-container .home-dianqi .project-Title {
+    line-height: 100px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f6f6f6;
+    background: #fff;
+}
+
+.index-container .home-dianqi .project-Title text {
+    font-size: 32px;
+    color: #333;
+}
+
+.index-container .home-dianqi .project-Title .on {
+    width: 40px;
+    height: 40px;
+}
+
+.index-container .home-dianqi .home-content .swiper {
+    height: 1552px;
+}
+
+.index-container .home-dianqi .home-content .uni-product-list {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    padding: 0 20px;
+    box-sizing: border-box;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    flex-direction: row;
+}
+
+.index-container .home-dianqi .home-content .uni-product-list .uni-view {
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.index-container .home-dianqi .home-content .uni-product-list .uni-product {
+    margin-top: 20px;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    flex-direction: column;
+    background: #fff;
+    width: 344px;
+    padding-bottom: 34px;
+    border-radius: 8rpx 8rpx 0 8px;
+}
+
+.index-container .home-dianqi .home-content .uni-product-list .uni-product .image-view {
+    height: 344px;
+    width: 344px;
+    margin: 6rpx 0;
+}
+
+.index-container .home-dianqi .home-content .uni-product-list .uni-product .image-view .uni-product-image {
+    height: 344px;
+    width: 344px;
+}
+
+.index-container .home-dianqi .home-content .uni-product-list .uni-product .uni-product-title {
+    width: 100%;
+    overflow: hidden;
+    line-height: 1.5;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    -webkit-line-clamp: 1;
+    font-size: 26px;
+    color: #333;
+    padding-left: 18px;
+    box-sizing: border-box;
+}
+
+.index-container .home-dianqi .home-content .uni-product-list .uni-product .uni-product-content {
+    width: 100%;
+    line-height: 1.5;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    -webkit-line-clamp: 1;
+    font-size: 20px;
+    color: #999;
+    margin-top: 12px;
+    padding-left: 18px;
+    box-sizing: border-box;
+}
+
+.index-container .home-dianqi .home-content .uni-product-list .uni-product .uni-product-price {
+    margin-top: 18px;
+    font-size: 26px;
+    color: #e92124;
+    line-height: 1.5;
+    position: relative;
+    padding-left: 19px;
+}
+
+.index-container .new-activity {
+    margin-top: 20px;
+}
+
+.index-container .new-activity .activity-Title {
+    line-height: 100px;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #f6f6f6;
+    background: #fff;
+}
+
+.index-container .new-activity .activity-Title text {
+    font-size: 32px;
+    color: #333;
+}
+
+.index-container .new-activity .activity-Title .on {
+    width: 40px;
+    height: 40px;
+}
+
+.index-container .new-activity .scroll-view_H {
+    white-space: nowrap;
+}
+
+.index-container .new-activity .scroll-view_H .scroll-view-item_H {
+    display: inline-block;
+    width: 432px;
+    height: 390px;
+    margin-top: 16px;
+    margin-left: 20px;
+    background: #fff;
+}
+
+.index-container .new-activity .scroll-view_H .scroll-view-item_H .activity {
+    width: 100%;
+}
+
+.index-container .new-activity .scroll-view_H .scroll-view-item_H .activity image {
+    width: 100%;
+    height: 270px;
+}
+
+.index-container .new-activity .scroll-view_H .scroll-view-item_H .activity .sheji {
+    text-align: center;
+    font-size: 26px;
+    color: #333;
+    margin-top: 18px;
+    margin-bottom: 15px;
+}
+
+.index-container .new-activity .scroll-view_H .scroll-view-item_H .activity .sheji text {
+    opacity: 0;
+}
+
+.index-container .new-activity .scroll-view_H .scroll-view-item_H .activity view:last-child {
+    text-align: center;
+    color: #999;
+    font-size: 22px;
+    height: 32px;
+}
+
+.index-container .new-activity .scroll-view_H .scroll-view-item_H .activity view:last-child text {
+    opacity: 0;
+}
+
+.index-container .new-activity .scroll-view_H .scroll-view-item_H:last-child {
+    margin-right: 20px;
+}
+
+.index-container .modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, .7);
+    z-index: -999;
+    opacity: 0;
+}
+
+.index-container .modal .modal-content {
+    width: 690px;
+    height: 780px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.index-container .modal .modal-content .modal-img,
+.index-container .modal .modal-content .modal-img .bgImg {
+    width: 100%;
+    height: 100%;
+}
+
+.index-container .modal .modal-content .modal-body {
+    width: 426px;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    margin-left: -213px;
+}
+
+.index-container .modal .modal-content .modal-body .modal-body_input {
+    background: #fff;
+    height: 68px;
+    width: 426px;
+    border-radius: 8px;
+    line-height: 68px;
+    padding-left: 20px;
+    font-size: 28px;
+    box-sizing: border-box;
+}
+
+.index-container .modal .modal-content .modal-body .modal-body_input:first-child {
+    margin-bottom: 16px;
+}
+
+.index-container .modal .modal-content .modal-close {
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    top: -40px;
+    right: 100px;
+}
+
+.index-container .modal .modal-content .modal-close image {
+    width: 48px;
+    height: 48px;
+}
+
+.index-container .modal .modal-content .quickGet {
+    width: 302px;
+    height: 85px;
+    position: absolute;
+    bottom: 62px;
+    right: 50%;
+    margin-right: -151px;
+}
+
+.index-container .modal .modal-content .quickGet .quickGet_img {
+    width: 302px;
+    height: 85px;
+}
+
+.index-container .active {
+    z-index: 999;
+    opacity: 1;
+}
+
+.storeSelect {
+    width: 699px;
+    height: 742px;
+    padding: 448rpx 75rpx 0;
+    box-sizing: border-box;
+    background: url(https://mapi.snimay.com/file/static/mall1/new/bg_pop%20up@2x.png) no-repeat 50%;
+    background-size: cover;
+    position: relative;
+}
+
+.storeSelect .near-store {
+    position: absolute;
+    top: 256px;
+    text-align: center;
+    color: #fff;
+    font-size: 44px;
+    background: linear-gradient(#f9806f, #e34a5e);
+    height: 80px;
+    line-height: 80px;
+    width: calc(100% - 150rpx);
+}
+
+.storeSelect .store-input {
+    height: 88px;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    border-radius: 14px;
+    align-items: center;
+    padding: 0 30px;
+    margin-bottom: 40px;
+}
+
+.storeSelect .store-input .text {
+    height: 80px;
+    line-height: 80px;
+    font-size: 24px;
+    flex: 1;
+}
+
+.storeSelect .store-input .arrow-down {
+    width: 24px;
+    height: 12px;
+    background: url(https://mapi.snimay.com/file/static/mall1/new/btn_cbb@2x.png) no-repeat 50%;
+    background-size: cover;
+    margin-left: 20px;
+}
+
+.storeSelect .btn-wrap {
+    display: flex;
+    justify-content: space-between;
+    font-size: 30px;
+    color: #bd0012;
+    text-align: center;
+}
+
+.storeSelect .btn-wrap .btn {
+    width: 260px;
+    line-height: 88px;
+    border-radius: 14px;
+    background: #fff;
+}
+
+.storeSelect .btn-wrap .ok {
+    background: linear-gradient(#fff3ab, #fae067);
+}
+
+.storeSelect .close-btn {
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    right: 65px;
+    top: -5px;
+}
+
+.sign-up-mode {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .5);
+    z-index: 99;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
+.sign-up-mode .mode-content {
+    position: fixed;
+    top: 25%;
+    left: 5%;
+    width: 90vw;
+}
+
+.sign-up-mode .mode-content .content-bg-command {
+    height: 628px;
+}
+
+.sign-up-mode .mode-content .content-bg-command .img {
+    width: 100%;
+    height: 100%;
+}
+
+.sign-up-mode .mode-content .submit-box {
+    position: absolute;
+    width: 280px;
+    height: 70px;
+    bottom: 180px;
+    left: 50%;
+    margin-left: -140px;
+}
+
+.sign-up-mode .mode-content .close-box {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    top: 0;
+    right: 5%;
+    margin-left: -40px;
+}
+
+.btn_disabled {
+    background-color: #ebebeb !important;
+    color: #484848;
+}
+
+.mp-search-box {
+    position: fixed;
+    top: 0px;
+    z-index: 9;
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+    background-color: #e92124;
+    display: flex;
+    box-sizing: border-box;
+    transition: top .5s ease-in-out;
+}
+
+.mp-search-box .mp-search-input {
+    flex: 1;
+    position: relative;
+}
+
+.mp-search-box .mp-search-input .ser-input {
+    height: 60px;
+    line-height: 60px;
+    text-align: left;
+    font-size: 28px;
+    color: #b2b2b2;
+    border-radius: 15px;
+    padding-left: 20px;
+    background-color: #f6f6f6;
+}
+
+.mp-search-box .mp-search-input .search_img {
+    position: absolute;
+    right: 20px;
+    top: 14px;
+    width: 34px;
+    height: 34px;
+}
+
+.mp-search-box .tips {
+    width: 100px;
+    height: 100%;
+    text-align: center;
+    margin-right: -20px;
+}
+
+.mp-search-box .tips .tips_img {
+    width: 37px;
+    height: 32px;
+    vertical-align: -18px;
+}
