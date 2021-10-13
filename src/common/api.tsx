@@ -11,3 +11,9 @@ export function getCarouselList() {
         type: "carouselList"
     });
 }
+
+export function getHotList() {
+    return get({
+        type: "hotlist"
+    });
+}

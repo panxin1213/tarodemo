@@ -46,5 +46,47 @@
             "url": "https://www.snimay.com/activity/details-364.shtml",
             "status": 1
         }
+    ],
+    "hotlist": [
+        {
+            "goodsId": "1799",
+            "appletImageUrl": "/applet/indexManager/20210323/snb9w7.jpg",
+            "title": "轻奢More悦木系列全屋定制",
+            "target": 0,
+            "favoriteNum": "0",
+            "spaceId": 1799,
+            "price": 298.0,
+            "houseImageUrl": "/image/imgNone.gif",
+            "imageUrl": "https://image.snimay.com/userfiles/images/fengm2.jpg",
+            "location": 0,
+            "category": 4
+        },
+        {
+            "goodsId": "1795",
+            "appletImageUrl": "/applet/indexManager/20210323/tajs1u.jpg",
+            "title": "雾青色瑰丽板系列全屋定制",
+            "target": 0,
+            "favoriteNum": "0",
+            "spaceId": 1795,
+            "price": 298.0,
+            "houseImageUrl": "/image/imgNone.gif",
+            "imageUrl": "https://image.snimay.com/userfiles/images/fengm1.jpg",
+            "location": 0,
+            "category": 4
+        },
+        {
+            "goodsId": "1733",
+            "appletImageUrl": "/applet/indexManager/20201014/lltwjg.jpg",
+            "title": "时光里系列全屋套餐",
+            "imageAlt": "29800元",
+            "target": 0,
+            "favoriteNum": "0",
+            "spaceId": 1733,
+            "price": 298.0,
+            "houseImageUrl": "/image/imgNone.gif",
+            "imageUrl": "https://image.snimay.com/userfiles/images/11160s353wjxe.jpg",
+            "location": 0,
+            "category": 4
+        }
     ]
 }

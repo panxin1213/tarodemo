@@ -4,12 +4,24 @@
 }
 
 .index-container .show {
-    top: -100rpx !important;
+    top: -100px !important;
 }
 
 .index-container .mp-search-box {
     position: static !important;
     display: flex;
+}
+
+.swiper taro-image-core,
+.index-nav taro-image-core,
+.hotContent taro-image-core {
+    width: 100% !important;
+    height: 100% !important;
+    overflow: initial !important;
+}
+
+.hotContent taro-image-core {
+    height: auto !important;
 }
 
 .index-container .mp-search-box .nearbyStore {
@@ -43,7 +55,7 @@
 }
 
 .index-container .index-nav {
-    padding: 58rpx 62rpx 39rpx 58px;
+    padding: 58px 62px 39px 58px;
 }
 
 .index-container .index-nav .index-nav-box {
@@ -54,17 +66,18 @@
     align-items: center;
 }
 
-.index-container .index-nav .index-nav-box view {
+.index-container .index-nav .index-nav-box .index-nav-box-view {
     width: 120px;
     text-align: center;
 }
 
-.index-container .index-nav .index-nav-box view image {
+.index-container .index-nav .index-nav-box image,
+.index-container .index-nav .index-nav-box img {
     width: 60px;
     height: 60px;
 }
 
-.index-container .index-nav .index-nav-box view text {
+.index-container .index-nav .index-nav-box .index-nav-box-view .index-nav-box-view-text {
     display: block;
     width: 100%;
     margin-top: 4px;
@@ -72,14 +85,14 @@
     font-size: 22px;
     color: #666;
     text-align: center;
-    line-height: 30px;
+    line-height: 60px;
 }
 
-.index-container .index-nav .index-nav-box view button:after {
+.index-container .index-nav .index-nav-box .index-nav-box-view .contact:after {
     border: none;
 }
 
-.index-container .index-nav .index-nav-box button {
+.index-container .index-nav .index-nav-box .index-nav-box-view .contact {
     padding-left: 0;
     padding-right: 0;
     box-sizing: border-box;
@@ -118,14 +131,15 @@
 .index-container .hotPackage .hotContent {
     display: flex;
     justify-content: flex-start;
-    padding: 20rpx 20rpx 30px;
+    padding: 20px 20px 30px;
 }
 
 .index-container .hotPackage .hotContent .hotContent-children {
     width: 224px;
 }
 
-.index-container .hotPackage .hotContent .hotContent-children image {
+.index-container .hotPackage .hotContent .hotContent-children image,
+.index-container .hotPackage .hotContent .hotContent-children img {
     width: 100%;
     height: 224px;
     border-radius: 8px;
@@ -137,7 +151,6 @@
     line-height: 32px;
     width: 100%;
     height: 32px;
-    margin-top: 18px;
     text-overflow: ellipsis;
     white-space: nowrap;
     overflow: hidden;
@@ -205,7 +218,7 @@
 }
 
 .index-container .projectTab .wuc-tab-item {
-    height: 62rpx !important;
+    height: 62px !important;
     line-height: 42px;
 }
 
@@ -221,7 +234,8 @@
     opacity: 1;
 }
 
-.index-container .projectTab .swiper .navigator-hover image {
+.index-container .projectTab .swiper .navigator-hover image,
+.index-container .projectTab .swiper .navigator-hover img {
     width: 100%;
     height: 100%;
 }
@@ -238,7 +252,8 @@
     position: relative;
 }
 
-.index-container .projectTab .moreFangan .children image {
+.index-container .projectTab .moreFangan .children image,
+.index-container .projectTab .moreFangan .children img {
     width: 100%;
     height: 100%;
     filter: brightness(60%);
@@ -259,7 +274,8 @@
     text-align: left;
 }
 
-.index-container .projectTab .moreFangan .children .vtolk image {
+.index-container .projectTab .moreFangan .children .vtolk image,
+.index-container .projectTab .moreFangan .children .vtolk img {
     width: 24px;
     height: 24px;
     padding-left: 8px;
@@ -347,13 +363,13 @@
     background: #fff;
     width: 344px;
     padding-bottom: 34px;
-    border-radius: 8rpx 8rpx 0 8px;
+    border-radius: 8px 8px 0 8px;
 }
 
 .index-container .home-dianqi .home-content .uni-product-list .uni-product .image-view {
     height: 344px;
     width: 344px;
-    margin: 6rpx 0;
+    margin: 6px 0;
 }
 
 .index-container .home-dianqi .home-content .uni-product-list .uni-product .image-view .uni-product-image {
@@ -438,7 +454,8 @@
     width: 100%;
 }
 
-.index-container .new-activity .scroll-view_H .scroll-view-item_H .activity image {
+.index-container .new-activity .scroll-view_H .scroll-view-item_H .activity image,
+.index-container .new-activity .scroll-view_H .scroll-view-item_H .activity img {
     width: 100%;
     height: 270px;
 }
@@ -527,7 +544,8 @@
     right: 100px;
 }
 
-.index-container .modal .modal-content .modal-close image {
+.index-container .modal .modal-content .modal-close image,
+.index-container .modal .modal-content .modal-close img {
     width: 48px;
     height: 48px;
 }
@@ -554,7 +572,7 @@
 .storeSelect {
     width: 699px;
     height: 742px;
-    padding: 448rpx 75rpx 0;
+    padding: 448px 75px 0;
     box-sizing: border-box;
     background: url(https://mapi.snimay.com/file/static/mall1/new/bg_pop%20up@2x.png) no-repeat 50%;
     background-size: cover;
@@ -570,7 +588,7 @@
     background: linear-gradient(#f9806f, #e34a5e);
     height: 80px;
     line-height: 80px;
-    width: calc(100% - 150rpx);
+    width: calc(100% - 150px);
 }
 
 .storeSelect .store-input {

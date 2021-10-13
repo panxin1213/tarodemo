@@ -101,7 +101,7 @@ page {
 @-webkit-keyframes fadeInUp {
     0% {
         opacity: 0;
-        transform: translate3d(0, 60rpx, 0);
+        transform: translate3d(0, 60px, 0);
     }
     to {
         opacity: 1;
@@ -112,7 +112,7 @@ page {
 @keyframes fadeInUp {
     0% {
         opacity: 0;
-        transform: translate3d(0, 60rpx, 0);
+        transform: translate3d(0, 60px, 0);
     }
     to {
         opacity: 1;
@@ -123,7 +123,7 @@ page {
 @-webkit-keyframes fadeInDown {
     0% {
         opacity: 0;
-        transform: translate3d(0, -30rpx, 0);
+        transform: translate3d(0, -30px, 0);
     }
     to {
         opacity: 1;
@@ -134,7 +134,7 @@ page {
 @keyframes fadeInDown {
     0% {
         opacity: 0;
-        transform: translate3d(0, -30rpx, 0);
+        transform: translate3d(0, -30px, 0);
     }
     to {
         opacity: 1;
@@ -419,6 +419,11 @@ page {
     margin: auto;
 }
 
+.miWA image,
+.miWA img {
+    min-width: auto !important;
+}
+
 .mine .headers .personImg .userAuth.data-v-27be7b81 {
     background-color: transparent;
     color: red;
@@ -463,7 +468,7 @@ page {
     height: 80px;
     line-height: 80px;
     padding: 0 20px;
-    border-bottom: 1rpx solid #f1f1f1;
+    border-bottom: 1px solid #f1f1f1;
     font-size: 30px;
     display: flex;
     justify-content: space-between;
@@ -471,7 +476,7 @@ page {
 
 .mine .tabs .tabcard .title .active.data-v-27be7b81 {
     color: #e92124;
-    border-bottom: 4rpx solid #e92124;
+    border-bottom: 4px solid #e92124;
 }
 
 .mine .tabs .tabcard .title text.data-v-27be7b81 {
@@ -489,7 +494,7 @@ page {
     width: 12px;
     border-color: #666;
     border-style: solid;
-    border-width: 2rpx 2rpx 0 0;
+    border-width: 2px 2px 0 0;
     transform: matrix(.71, .71, -.71, .71, 0, 0);
     position: absolute;
     top: 50%;
@@ -570,7 +575,7 @@ page {
 
 .mine .tabs .tabcard .all-order.data-v-27be7b81 {
     line-height: 80px;
-    border: 1rpx solid #ededed;
+    border: 1px solid #ededed;
     text-align: center;
     border-radius: 6px;
     font-size: 28px;
@@ -578,7 +583,7 @@ page {
 }
 
 .mine .tabs .orders .flexItem.data-v-27be7b81 {
-    padding: 35rpx 0 55px;
+    padding: 35px 0 55px;
 }
 
 .mine .tabs .orders .minddle-flex-item.data-v-27be7b81 {
@@ -609,7 +614,7 @@ page {
 }
 
 .mine .tabs .tools .flexItem.data-v-27be7b81 {
-    padding: 35rpx 0 55px;
+    padding: 35px 0 55px;
 }
 
 .mine .tabs .tools .flexItem button.data-v-27be7b81 {
@@ -640,7 +645,7 @@ page {
     color: #333;
     font-size: 26px;
     padding-left: 24px;
-    border: 1rpx solid #efefef;
+    border: 1px solid #efefef;
     margin-bottom: 20px;
 }
 
@@ -724,17 +729,17 @@ page {
 
 .person-card .change-card-mode .mode-box .box-title {
     padding: 40px;
-    border-bottom: 2rpx solid #ccc;
+    border-bottom: 2px solid #ccc;
 }
 
 .person-card .change-card-mode .mode-box .box-content {
-    padding: 40rpx 120px;
+    padding: 40px 120px;
 }
 
 .person-card .change-card-mode .mode-box .box-btn {
     display: flex;
     justify-content: center;
-    padding: 40rpx 0;
+    padding: 40px 0;
 }
 
 .person-card .change-card-mode .mode-box .box-btn .btn-cancle {
@@ -749,7 +754,7 @@ page {
 
 .person-card .change-card-mode .mode-box .box-btn .btn-cancle,
 .person-card .change-card-mode .mode-box .box-btn .btn-change {
-    padding: 10rpx 60px;
+    padding: 10px 60px;
     border-radius: 6px;
 }
 
@@ -766,7 +771,7 @@ page {
 .person-card .picBackground-box .box .changeCard {
     height: 30px;
     background: hsla(0, 0%, 100%, .5);
-    border-radius: 100rpx 0 0 100px;
+    border-radius: 100px 0 0 100px;
     position: absolute;
     bottom: 200px;
     right: 0;
@@ -815,7 +820,7 @@ page {
     background-repeat: no-repeat;
     width: 84%;
     height: 320px;
-    box-shadow: 0rpx 3rpx 5rpx 0rpx rgba(0, 0, 0, .15);
+    box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, .15);
     margin: 0 auto;
     padding: 0 20px;
     border-radius: 20px;
@@ -844,7 +849,7 @@ page {
     line-height: 36px;
     letter-spacing: -1px;
     color: #000;
-    margin: 10rpx 0;
+    margin: 10px 0;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -873,7 +878,7 @@ page {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    border: 1rpx solid #eee;
+    border: 1px solid #eee;
 }
 
 .person-card .picBackground-box .box .cardDetail .card .cardCenter {
@@ -944,7 +949,7 @@ page {
 }
 
 .person-card .sendCardBtn {
-    margin: 220rpx 0 40px;
+    margin: 220px 0 40px;
     padding: 0 20px;
 }
 
@@ -974,7 +979,7 @@ page {
     height: 80px;
     border-radius: 50%;
     background: #fff;
-    box-shadow: 0 0 20rpx #ccc;
+    box-shadow: 0 0 20px #ccc;
 }
 
 .person-card .code-flex .card-code image {
@@ -990,7 +995,7 @@ page {
 }
 
 .person-card .personEdit .title {
-    padding: 20rpx 10px;
+    padding: 20px 10px;
     height: 46px;
     justify-content: space-between;
     font-family: SourceHanSansCN-Regular;
@@ -1020,7 +1025,7 @@ page {
 
 .person-card .personEdit .content {
     background-color: #fff;
-    padding: 20rpx 0;
+    padding: 20px 0;
 }
 
 .person-card .personEdit .content .contenBox {
@@ -1120,7 +1125,7 @@ page {
 .person-card .enterpriseData .logoBox .snimayLogo {
     width: 500px;
     height: 200px;
-    padding: 50rpx 0;
+    padding: 50px 0;
 }
 
 .person-card .enterpriseData .Contents .profileContents {
@@ -1165,7 +1170,7 @@ page {
 }
 
 .person-card .enterpriseData .brand .child {
-    margin: 40rpx 0;
+    margin: 40px 0;
     -moz-page-break-inside: avoid;
     -webkit-column-break-inside: avoid;
     -moz-column-break-inside: avoid;
@@ -1198,13 +1203,13 @@ page {
 }
 
 .person-card .enterpriseData .server .Contentsbox {
-    padding: 20rpx 0;
+    padding: 20px 0;
 }
 
 .person-card .enterpriseData .server .Contentsbox .serverContet {
     font-size: 24px;
     line-height: 40px;
-    padding: 30rpx 0;
+    padding: 30px 0;
 }
 
 .person-card .enterpriseData .server .Contentsbox .scroll_box {
@@ -1244,7 +1249,7 @@ page {
     height: 30px;
     background: #fff;
     witdh: 100%;
-    padding: 14rpx 0 5px;
+    padding: 14px 0 5px;
 }
 
 .person-card .enterpriseData .server .slide-bar {
@@ -1288,7 +1293,7 @@ page {
 }
 
 .person-card .enterpriseData .evolution .evolutionContent .course .infos .outer {
-    padding: 0 20rpx 20px;
+    padding: 0 20px 20px;
 }
 
 .person-card .enterpriseData .evolution .evolutionContent .course .infos .outer:before {
@@ -1299,7 +1304,7 @@ page {
     height: 0;
     border-color: #fdeeee transparent transparent;
     border-style: solid;
-    border-width: 30rpx 30rpx 0;
+    border-width: 30px 30px 0;
     top: 24px;
     left: -26px;
     transform: rotate(235deg);
@@ -1386,7 +1391,7 @@ page {
     right: 20px;
     bottom: 10%;
     border-radius: 50%;
-    border: 1rpx solid #eee;
+    border: 1px solid #eee;
 }
 
 .person-card .gotop image {
@@ -1508,7 +1513,7 @@ page {
     width: 100%;
     height: 80px;
     line-height: 80px;
-    border-bottom: 1rpx solid #ededed;
+    border-bottom: 1px solid #ededed;
     background: #fff;
     z-index: 99;
 }
@@ -1655,7 +1660,7 @@ page {
     justify-content: space-between;
     line-height: 80px;
     align-items: center;
-    padding: 20rpx 200rpx 20rpx 20px;
+    padding: 20px 200px 20px 20px;
 }
 
 .card-data .data-statistics .data-lately .lately-item .item-pv.data-v-51ff88ed,
@@ -1751,7 +1756,7 @@ page {
     display: flex;
     font-size: 24px;
     align-items: center;
-    padding: 30rpx 40px;
+    padding: 30px 40px;
 }
 
 .card-data .client-list .list-visitor .checkbox-group .list .avatar.data-v-51ff88ed {
@@ -1862,7 +1867,7 @@ page {
 
 .card-data .client-list .list-visitor .checkbox-group .info.data-v-51ff88ed {
     color: #999;
-    padding: 30rpx 0;
+    padding: 30px 0;
     background: #f6f6f6;
 }
 
@@ -1980,7 +1985,7 @@ page.data-v-761dcc16 {
     height: 60px;
     line-height: 60px;
     flex: 1;
-    padding: 0 10rpx 0 30px;
+    padding: 0 10px 0 30px;
 }
 
 .businessCardBox .searchBox .searchRefresh .searchrefreshImg.data-v-761dcc16 {
@@ -2031,7 +2036,7 @@ page.data-v-761dcc16 {
     width: 100px;
     height: 100px;
     border-radius: 50%;
-    border: 1rpx solid #eee;
+    border: 1px solid #eee;
 }
 
 .businessCardBox .cardBox .cardDataBox .card .cardDetailBox .cardLeftBox .cardCenter.data-v-761dcc16 {
@@ -2090,7 +2095,7 @@ page.data-v-761dcc16 {
 }
 
 .businessCardBox .cardBox .cardDataBox .card .active.data-v-761dcc16 {
-    max-height: 200rpx !important;
+    max-height: 200px !important;
 }
 
 .businessCardBox .cardBox .cardDataBox .card .iconBox.data-v-761dcc16 {
@@ -2116,7 +2121,7 @@ page.data-v-761dcc16 {
     margin: 0 auto;
     width: 40px;
     height: 40px;
-    padding: 20rpx 0;
+    padding: 20px 0;
 }
 
 .businessCardBox .cardNumber.data-v-761dcc16 {
@@ -2142,7 +2147,7 @@ page.data-v-761dcc16 {
     right: 20px;
     bottom: 10%;
     border-radius: 50%;
-    border: 1rpx solid #eee;
+    border: 1px solid #eee;
 }
 
 .businessCardBox .gotop image.data-v-761dcc16 {
