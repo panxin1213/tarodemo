@@ -2,7 +2,7 @@ import { View, Text, Image, Swiper, SwiperItem, Navigator, Button } from '@taroj
 import { useState, useEffect } from 'react'
 import './index.scss'
 import sousuo from '../../static/SY-vav-sousuo.png';
-import { getCarouselList, getHotList } from '../../common/api'
+import { getCarouselList, getHotList, getGoodist } from '../../common/api'
 import m0 from '../../static/SY-fl-dingzhi.png';
 import m1 from '../../static/SY-fl-ruzhu.png';
 import m2 from '../../static/SY-fl-jiadian.png';
@@ -13,12 +13,16 @@ import m6 from '../../static/btn_live@2x.png';
 import m7 from '../../static/btn_consult@2x.png';
 import m8 from '../../static/SY-gengduo-01.png';
 
+import TabSwiper from '../../components/tabswiper'
+
 
 export default function Index() {
-  const [showSearchBar, setshowSearchBar] = useState(true)
-  const [autoplay, setautoplay] = useState(true)
+  const showSearchBar = (true)
+  const autoplay = (true)
   const [carouselList, setcarouselList] = useState([])
   const [hotlist, sethotlist] = useState([])
+  const [goodlist, setgoodlist] = useState([])
+
 
   const swiperClick = (record: any) => {
 
@@ -33,6 +37,12 @@ export default function Index() {
       sethotlist(a);
     });
 
+    getGoodist().then((a: []) => {
+      const arr: any = a.map((a: any) => {
+        return { title: a.title, img: a.imageUrl, url: '/pagesB/spaceInfo/spaceInfo?goodsId=' + a.goodsId }
+      });
+      setgoodlist(arr);
+    });
   }, []);
 
   return (
@@ -49,7 +59,7 @@ export default function Index() {
             <Swiper autoplay={autoplay} circular={true} className="swiper" duration={500} indicatorActiveColor="#E92124" indicatorColor="#fff" indicatorDots={true} interval={5000}>
               {
                 carouselList.map((a: any, index) => {
-                  return <SwiperItem key={index} className="Navigator" onClick={swiperClick}>
+                  return <SwiperItem key={index} className="navigator" onClick={swiperClick}>
                     <Image lazyLoad className="img" mode="aspectFill" src={a.pic}></Image>
                   </SwiperItem>
                 })
@@ -135,6 +145,22 @@ export default function Index() {
             }
           </View>
         </View>
+      }
+      {goodlist && goodlist.length && <View className="projectTab">
+        <Navigator className="project-Title" hoverClass="none" url="/pages/spaceCustomization/spaceCustomization">
+          <Text>空间定制</Text>
+          <Image lazyLoad className="on" mode="aspectFill" src={m8}></Image>
+        </Navigator>
+        <TabSwiper data={goodlist} />
+        {/* <wuc-tab textFlex backgroundColor="#fff" bind:__l="__l" bind:updateTabCur="__e" data-event-opts="{{[ [ '^updateTabCur',[ [ '__set_sync',['$0','TabCur','$event'],[''] ] ] ],[ '^updateTabCur',[ [ '__set_sync',['$0','TabCur','$event'],[''] ] ] ] ]}}" fontColor="#333" selectBottom="10rpx" selectColor="#E92124" selectwidth="30rpx" tabList="{{tabList}}" tabCur="{{TabCur}}" vueId="1"></wuc-tab>
+        <swiper bindchange="__e" circular="{{true}}" className="swiper" current="{{TabCur}}" data-event-opts="{{[ [ 'change',[ [ 'swiperChange',['$event'] ] ] ] ]}}" duration="300" indicatorActiveColor="rgba(255,255,255,0)" indicatorColor="rgba(255,255,255,0)">
+          <swiper-item wx:for="{{spaceList}}" wx:key="index">
+            <Navigator className="Navigator-hover" hoverClass="none" url="{{'/pagesB/spaceInfo/spaceInfo?goodsId='+item.goodsId}}">
+              <Image lazyLoad mode="aspectFill" src="{{item.appletImageUrl}}"></Image>
+            </Navigator>
+          </swiper-item>
+        </swiper> */}
+      </View>
       }
 
     </View >

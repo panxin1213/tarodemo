@@ -88,5 +88,59 @@
             "location": 0,
             "category": 4
         }
+    ],
+    "goodlist": [
+        {
+            "goodsId": "1762",
+            "appletImageUrl": "/applet/indexManager/20201015/ys7vhv.jpg",
+            "title": "入户",
+            "target": 0,
+            "favoriteNum": "12645",
+            "spaceId": 1762,
+            "price": 1.0,
+            "houseImageUrl": "/image/imgNone.gif",
+            "imageUrl": "https://image.snimay.com/userfiles/images/sdfsdewdfef.jpg",
+            "location": 0,
+            "category": 2
+        },
+        {
+            "goodsId": "1764",
+            "appletImageUrl": "/applet/indexManager/20201015/m83mo6.jpg",
+            "title": "厨房",
+            "target": 0,
+            "favoriteNum": "7151",
+            "spaceId": 1764,
+            "price": 1.0,
+            "houseImageUrl": "/image/imgNone.gif",
+            "imageUrl": "https://image.snimay.com/userfiles/images/chufang01.jpg",
+            "location": 0,
+            "category": 2
+        },
+        {
+            "goodsId": "1761",
+            "appletImageUrl": "/applet/indexManager/20201015/dvjhfy.jpg",
+            "title": "客餐厅",
+            "target": 0,
+            "favoriteNum": "5264",
+            "spaceId": 1761,
+            "price": 1.0,
+            "houseImageUrl": "/image/imgNone.gif",
+            "imageUrl": "https://image.snimay.com/userfiles/images/bbbb001.jpg",
+            "location": 0,
+            "category": 2
+        },
+        {
+            "goodsId": "1764",
+            "appletImageUrl": "/applet/indexManager/20201015/gkn0kx.jpg",
+            "title": "卧室",
+            "target": 0,
+            "favoriteNum": "7151",
+            "spaceId": 1764,
+            "price": 1.0,
+            "houseImageUrl": "/image/imgNone.gif",
+            "imageUrl": "https://image.snimay.com/userfiles/images/woshi001.jpg",
+            "location": 0,
+            "category": 2
+        }
     ]
 }

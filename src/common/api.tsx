@@ -17,3 +17,9 @@ export function getHotList() {
         type: "hotlist"
     });
 }
+
+export function getGoodist() {
+    return get({
+        type: "goodlist"
+    });
+}

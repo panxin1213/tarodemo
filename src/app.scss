@@ -1,3 +1,6 @@
+$color-brand: #e92124;
+@import "~taro-ui/dist/style/index.scss";
+
 page {
     font-size: medium !important;
     box-sizing: border-box;
@@ -383,7 +386,7 @@ page {
 .mine .headers .message .number.data-v-27be7b81 {
     position: absolute;
     font-size: 20px;
-    background: #e92124;
+    background: $color-brand;
     color: #fff;
     left: -20px;
     top: -10px;
@@ -475,8 +478,8 @@ page {
 }
 
 .mine .tabs .tabcard .title .active.data-v-27be7b81 {
-    color: #e92124;
-    border-bottom: 4px solid #e92124;
+    color: $color-brand;
+    border-bottom: 4px solid $color-brand;
 }
 
 .mine .tabs .tabcard .title text.data-v-27be7b81 {
@@ -701,7 +704,7 @@ page {
     line-height: 26px;
     height: 26px;
     box-sizing: border-box;
-    color: #e92124;
+    color: $color-brand;
     font-size: 26px;
     padding: 0 20px;
     margin-top: 24px;
@@ -954,7 +957,7 @@ page {
 }
 
 .person-card .sendCardBtn .sendCard {
-    background: #e92124;
+    background: $color-brand;
     font-size: 30px;
     height: 90px;
     line-height: 90px;
@@ -1146,7 +1149,7 @@ page {
     font-size: 24px;
     font-weight: 400;
     letter-spacing: 0px;
-    color: #e92124;
+    color: $color-brand;
 }
 
 .person-card .enterpriseData .brand .title {
@@ -1318,7 +1321,7 @@ page {
     font-stretch: normal;
     line-height: 90px;
     letter-spacing: 0px;
-    color: #e92124;
+    color: $color-brand;
 }
 
 .person-card .enterpriseData .evolution .evolutionContent .course .infos .outer .outerContent {
@@ -1628,7 +1631,7 @@ page {
     justify-content: space-around;
     text-align: center;
     padding: 40px;
-    background: #e92124;
+    background: $color-brand;
     color: #fff;
 }
 
@@ -1687,12 +1690,12 @@ page {
 }
 
 .card-data .data-statistics .data-lately .lately-item .today.data-v-51ff88ed {
-    background: #e92124;
+    background: $color-brand;
 }
 
 .card-data .data-statistics .data-lately .lately-item .yesterday.data-v-51ff88ed {
     background: #ececec;
-    color: #e92124;
+    color: $color-brand;
 }
 
 .card-data .data-statistics .change-card.data-v-51ff88ed {
@@ -1835,7 +1838,7 @@ page {
 }
 
 .card-data .client-list .list-visitor .checkbox-group .list .middle .name .name-left .left-count .option-btn text.data-v-51ff88ed {
-    color: #e92124;
+    color: $color-brand;
 }
 
 .card-data .client-list .list-visitor .checkbox-group .list .middle .name .name-left .left-count .option-btn .arrow-down.data-v-51ff88ed {
@@ -2253,3 +2256,4 @@ uni-page-wrapper.data-v-761dcc16 {
     min-height: 100%;
     backgtound: #f6f6f6;
 }
+

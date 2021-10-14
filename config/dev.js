@@ -4,6 +4,10 @@ module.exports = {
   },
   defineConstants: {
   },
-  mini: {},
-  h5: {}
+  mini: {
+    outputRoot: 'dist_mini'
+  },
+  h5: {
+    outputRoot: 'dist_h5'
+  }
 }
