@@ -23,3 +23,22 @@ export function getGoodist() {
         type: "goodlist"
     });
 }
+
+export function getTypeGoodist() {
+    return get({
+        type: "goodtypes"
+    });
+}
+
+export function getJiadiangoods() {
+    return get({
+        type: "jiadiangoods"
+    });
+}
+
+
+export function getIndexhuodong() {
+    return get({
+        type: "indexhuodong"
+    });
+}

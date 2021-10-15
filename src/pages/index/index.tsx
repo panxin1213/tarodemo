@@ -14,7 +14,10 @@ import m7 from '../../static/btn_consult@2x.png';
 import m8 from '../../static/SY-gengduo-01.png';
 
 import TabSwiper from '../../components/tabswiper'
-
+import Typegood from '../components/index/typegood'
+import Jiadian from '../components/index/jiadian'
+import Huodong from '../components/index/huodong'
+import Footer from '../components/footer';
 
 export default function Index() {
   const showSearchBar = (true)
@@ -130,7 +133,7 @@ export default function Index() {
               hotlist.map((item: any, index) => {
                 return <View className="hotContent-children" key={index}>
                   <Navigator hoverClass="none" url={'/pagesB/spaceInfo_hot/spaceInfo_hot?goodsId=' + item.goodsId}>
-                    <Image lazyLoad mode="aspectFit" src={item.imageUrl}></Image>
+                    <Image lazyLoad mode={process.env.TARO_ENV === 'h5' ? "aspectFit" : "aspectFill"} src={item.imageUrl}></Image>
                     <View className="title">{item.title}</View>
                     <View className="hot-moery">
                       <Text>{'¥' + item.price}</Text>
@@ -162,6 +165,33 @@ export default function Index() {
         </swiper> */}
       </View>
       }
+      <View className="house-ruzhu">
+        <Navigator className="project-Title" hoverClass="none" url="/pages/housing/housing">
+          <Text>拎包入住</Text>
+          <Image lazyLoad className="on" mode="aspectFill" src={m8}></Image>
+        </Navigator>
+        <Typegood />
+      </View>
+
+      <View className="home-dianqi">
+        <Navigator className="project-Title" hoverClass="none" url="/pages/appliances/appliances">
+          <Text>家居家电</Text>
+          <Image lazyLoad className="on" mode="aspectFill" src={m8}></Image>
+        </Navigator>
+        <View className="home-content">
+          <Jiadian />
+        </View>
+      </View>
+
+      <View className="new-activity">
+        <Navigator className="activity-Title" hoverClass="none" url="/pages/activityList/activityList">
+          <Text>最新活动</Text>
+          <Image lazyLoad className="on" mode="aspectFill" src={m8}></Image>
+        </Navigator>
+        <Huodong />
+      </View>
+
+      <Footer />
 
     </View >
   )

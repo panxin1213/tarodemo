@@ -1,0 +1,21 @@
+.swiper {
+    padding-top: 30px;
+}
+
+.swiper-img {
+    width: 100%;
+    display: block;
+    transform: scale(0.8);
+    opacity: 0.6;
+    transition: all 0.3s ease;
+    border-radius: 10px;
+}
+
+.swiper-img img {
+    border-radius: 10px;
+}
+
+.swiper-img.swiper-active {
+    transform: scale(1); //放大缩放的效果
+    opacity: 1;
+}

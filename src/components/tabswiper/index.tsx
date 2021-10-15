@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { AtTabs, AtTabsPane } from 'taro-ui'
-import { View, Text, Image, Swiper, SwiperItem, Navigator, Button } from '@tarojs/components'
+import { Image, Swiper, SwiperItem, Navigator } from '@tarojs/components'
 
 export default function TabSwiper(props) {
     const [list, setlist] = useState([]);
@@ -28,7 +28,7 @@ export default function TabSwiper(props) {
             });
             setitems(arr);
         }
-    }, [])
+    }, [props.data])
 
     if (!list || !list.length) {
         return <></>;
@@ -43,17 +43,22 @@ export default function TabSwiper(props) {
     }
 
     return <>
-        <AtTabs current={goodindex} tabList={list.map((a: any) => ({ 'title': a.title }))} onClick={goodhandleClick}></AtTabs>
-        {
-            elements && elements.length ? elements.map((a: any, index) => {
-                return <AtTabsPane current={goodindex} index={index} key={index}>
-                    {a}
-                </AtTabsPane>
-            }) : ""
-        }{
-            items && items.length ? <Swiper className="swiper" autoplay={true} current={goodindex} onChange={goodhandleClick} circular={true} duration={500} indicatorActiveColor="#E92124" indicatorColor="#fff" indicatorDots={true} interval={5000}>
+        <AtTabs swipeable={false} scroll={list.length > 4} current={goodindex} tabList={list.map((a: any) => ({ 'title': a.title }))} onClick={goodhandleClick}>
+            {
+                !props.swiper && elements && elements.length ? elements.map((a: any, index) => {
+                    return <AtTabsPane current={goodindex} index={index} key={index}>
+                        {a}
+                    </AtTabsPane>
+                }) : ""
+            }
+        </AtTabs>{
+            ((items && items.length) || (elements && elements.length && props.swiper)) ? <Swiper className="swiper" autoplay={false} current={goodindex} onChange={goodhandleClick} circular={true} duration={500} indicatorActiveColor="#E92124" indicatorColor="#fff" indicatorDots={true} interval={5000}>
                 {
-                    items.map((a: any, index) => {
+                    props.swiper ? elements.map((a: any, index) => {
+                        return <SwiperItem key={index}>
+                            {a}
+                        </SwiperItem>
+                    }) : items.map((a: any, index) => {
                         return <SwiperItem key={index}>
                             {
                                 a.url ? <Navigator hoverClass="none" url={a.url}>

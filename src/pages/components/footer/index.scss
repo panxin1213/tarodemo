@@ -1,0 +1,36 @@
+.bottom {
+    margin-top: 20px;
+    background: #fff;
+}
+
+.bottom .first {
+    padding: 42px 96px;
+    display: flex;
+    justify-content: center;
+    line-height: 40px;
+    border-bottom: 1px solid #eee;
+}
+
+.bottom .first .a {
+    font-size: 22px;
+    color: #666;
+}
+
+.bottom .first .a .a_text {
+    font-size: 36px;
+    color: #e92124;
+    margin-left: 6px;
+    vertical-align: -4px;
+}
+
+.bottom .first .b {
+    font-size: 22px;
+    color: #666;
+}
+
+.bottom .second {
+    padding: 32px 90px 24px;
+    text-align: center;
+    font-size: 18px;
+    color: #999;
+}
