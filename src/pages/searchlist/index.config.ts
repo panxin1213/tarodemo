@@ -1,6 +1,6 @@
 export default {
   "enablePullDownRefresh": false,
-  "navigationBarTitleText": "诗尼曼官方商城",
+  "navigationBarTitleText": "搜索",
   "navigationBarBackgroundColor": "#E92124",
   "navigationBarTextStyle": "white"
 }

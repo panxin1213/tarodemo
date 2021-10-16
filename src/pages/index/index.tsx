@@ -26,7 +26,6 @@ export default function Index() {
   const [hotlist, sethotlist] = useState([])
   const [goodlist, setgoodlist] = useState([])
 
-
   const swiperClick = (record: any) => {
 
   }
@@ -46,7 +45,10 @@ export default function Index() {
       });
       setgoodlist(arr);
     });
+
+
   }, []);
+
 
   return (
     <View className="index-container">
