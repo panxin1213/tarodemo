@@ -6,7 +6,8 @@ export default {
     'pages/store/index',
     "pages/mine/index",
     "pages/active/index",
-    "pages/searchlist/index"
+    "pages/searchlist/index",
+    "pages/spaceInfo/index"
   ],
   window: {
     backgroundTextStyle: 'light',

@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import noData from '../../static/noData.png';
 import { AtLoadMore } from 'taro-ui'
 import { getSearchList } from '../../common/api'
+import Taro from '@tarojs/taro';
 import './index.scss'
 
 export default function Index() {

@@ -38,7 +38,7 @@ export default function Swiper3D(props) {
             previousMargin='50px'
             nextMargin='50px'
             onChange={swiperChange}
-            className='swiper'
+            className='swiper3d'
             circular
             interval={2000}
             style={`height:${swiperH}`}

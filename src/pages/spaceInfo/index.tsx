@@ -1,75 +1,147 @@
-import { Image, View, Swiper, Video, Text, Block, Button, Navigator, Input } from '@tarojs/components'
-import Taro, { useRouter } from '@tarojs/taro'
+import { Image, View, Swiper, SwiperItem, Video, Text, Block, Button, Navigator, Input, RichText } from '@tarojs/components'
+import Taro, { useRouter, usePageScroll } from '@tarojs/taro'
 
 import { useState, useEffect } from 'react'
 import { getInfodetail } from '../../common/api'
+import TopBar from '../../components/topbar';
+import videoplay from '../../static/video_play.png';
+
+const serveritems: [{
+    name: "商品详情",
+    type: "A"
+}, {
+    name: "定制流程",
+    type: "C"
+}, {
+    name: "品牌实力",
+    type: "B"
+}, {
+    name: "服务保障",
+    type: "D"
+}]
 
 export default function Index(props) {
+    const [showTopBar, setshowTopBar] = useState(false);
+    const [swiperList, setswiperList] = useState(new Array<any>());
+    const [isPlay, setisPlay] = useState(true);
+    const [currentSwiper, setcurrentSwiper] = useState(0);
+    const [goodsData, setgoodsData] = useState<any>({});
+    const [videoTime, setvideoTime] = useState(0);
+    const [explain, setexplain] = useState(new Array<any>());
+    const [itemSelect, setitemSelect] = useState(0);
+    const [scene, setscene] = useState('');
+    const [goodsImg, setgoodsImg] = useState({
+        brand: "",
+        order: "",
+        afterSale: ""
+    });
+
+
+
+
+
+
+
+
+    usePageScroll(t => {
+        if (t.scrollTop < 550) {
+            setshowTopBar(false);
+        } else {
+            setshowTopBar(true);
+        }
+    });
+
+
+    const toPlay = () => {
+
+    }
+
+    const outPlay = () => {
+
+    }
+
+    const showSelect2 = () => {
+
+    }
+
+    const toChange = () => {
+
+    }
+
+    const mean = () => {
+
+    }
 
     return <View className="goods data-v-c50eabf2">
-        <top-bar bind:__l="__l" className="data-v-c50eabf2" showTopBar="{{showTopBar}}" title="方案详情" vueId="1"></top-bar>
+        <TopBar className="data-v-c50eabf2" showTopBar={showTopBar} title="方案详情" vueId="1"></TopBar>
         <View className="Swiper-box data-v-c50eabf2">
-            <Swiper autoplay="true" bindchange="__e" circular="true" className="data-v-c50eabf2" data-event-opts="{{[ [ 'change',[ [ 'swiperChange',['$event'] ] ] ] ]}}">
-                <Swiper-item className="data-v-c50eabf2" wx:for="{{swiperList}}" wx:for-index="__i0__" wx:for-item="Swiper" wx:key="id">
-                    <Image className="data-v-c50eabf2" mode="aspectFill" src="{{Swiper.img}}"></Image>
-                </Swiper-item>
+            <Swiper autoplay={true} circular={true} className="data-v-c50eabf2" onChange={
+                (e) => {
+                    setcurrentSwiper(e.detail.current);
+                }
+            }>
+                {
+
+                    swiperList.map((a: any, index) => {
+                        return <SwiperItem className="data-v-c50eabf2" key={index}>
+                            <Image className="data-v-c50eabf2" mode="aspectFill" src={a}></Image>
+                        </SwiperItem>
+                    })
+                }
             </Swiper>
-            <View className="indicator data-v-c50eabf2">{{ currentSwiper+ 1 + '/' + swiperList.length}}</View>
-            <View bindtap="__e" className="video_play data-v-c50eabf2" data-event-opts="{{[ [ 'tap',[ [ 'toPlay',['$event'] ] ] ] ]}}" wx:if="{{isPlay&&goodsData.Video}}">
-                <View className="play_icon data-v-c50eabf2" style="{{'background-Image:'+'url('+$root.m0+')'+';'}}">
-                    <View className="video_time data-v-c50eabf2">{{ videoTime }}</View>
-                </View>
-            </View>
-            <View className="video_box data-v-c50eabf2" wx:if="{{!isPlay}}">
-                <Video autoplay showMuteBtn className="data-v-c50eabf2" controls="controls" enableProgressGesture="false" id="swiperVideo" src="{{goodsData.Video}}"></Video>
-                <View className="pause_play global_df_c data-v-c50eabf2">
-                    <View bindtap="__e" className="pause_btn global_df_c data-v-c50eabf2" data-event-opts="{{[ [ 'tap',[ [ 'outPlay',['$event'] ] ] ] ]}}">退出播放</View>
-                </View>
-            </View>
+            <View className="indicator data-v-c50eabf2">{currentSwiper + 1 + '/' + swiperList.length}</View>
+            {
+                isPlay && goodsData?.video ? <View className="video_play data-v-c50eabf2" onClick={toPlay}>
+                    <View className="play_icon data-v-c50eabf2" style={{ backgroundImage: `url('${videoplay}')` }} >
+                        <View className="video_time data-v-c50eabf2">{videoTime}</View>
+                    </View>
+                </View> : ""
+            }
+            {
+                !isPlay && goodsData?.video ? <View className="video_box data-v-c50eabf2">
+                    <Video autoplay showMuteBtn className="data-v-c50eabf2" controls enableProgressGesture={false} id="swiperVideo" src={goodsData.video}></Video>
+                    <View className="pause_play global_df_c data-v-c50eabf2">
+                        <View className="pause_btn global_df_c data-v-c50eabf2" onClick={outPlay}>退出播放</View>
+                    </View>
+                </View> : ""
+            }
         </View>
         <View className="info-box goods-info data-v-c50eabf2">
-            <View className="price data-v-c50eabf2">￥<Text className="nowMoney data-v-c50eabf2">{{ goodsData.price }}</Text>
+            <View className="price data-v-c50eabf2">￥<Text className="nowMoney data-v-c50eabf2">{goodsData.price}</Text>
             </View>
             <View className="title data-v-c50eabf2">
-                <Text className="titles data-v-c50eabf2">{{ goodsData.title }}</Text>
+                <Text className="titles data-v-c50eabf2">{goodsData.title}</Text>
             </View>
         </View>
         <View className="info-box spec data-v-c50eabf2">
-            <View bindtap="__e" className="row data-v-c50eabf2" data-event-opts="{{[ [ 'tap',[ [ 'showSelect2',['$event'] ] ] ] ]}}">
+            <View className="row data-v-c50eabf2" onClick={showSelect2}>
                 <View className="Text data-v-c50eabf2">服务</View>
                 <View className="content data-v-c50eabf2">
-                    <Text className="data-v-c50eabf2" style="margin-right:10rpx;" wx:for="{{explain}}" wx:key="index">{{ item.title }}</Text>
+                    {
+                        explain.map((item: any, index) => {
+                            return <Text className="data-v-c50eabf2" style={{ marginRight: 10 }} key={index}>{item.title}</Text>
+                        })
+                    }
                 </View>
             </View>
         </View>
         <View className="description data-v-c50eabf2">
             <View className="items data-v-c50eabf2">
-                <Text catchtap="__e" className="{{['flex1 data-v-c50eabf2',index===itemSelect?'active':'']}}" data-event-opts="{{[ [ 'tap',[ [ 'toChange',[index,'$0'],[ [ ['items','',index,'type'] ] ] ] ] ] ]}}" wx:for="{{items}}" wx:key="index">{{ ''+item.name + '' }}</Text>
+                {
+                    serveritems.map((item: any, index) => {
+                        return <Text className={"flex1 data-v-c50eabf2" + (index === itemSelect ? ' actice' : '')} key={index}>{'' + item.name + ''}</Text>
+                    })
+                }
             </View>
             <View className="con data-v-c50eabf2">
-                <View className="data-v-c50eabf2" wx:if="{{type==='A'}}">
-                    <rich-Text className="data-v-c50eabf2" nodes="{{scene}}"></rich-Text>
+                <View className="data-v-c50eabf2">
+                    <RichText className="data-v-c50eabf2" nodes={itemSelect === 0 ? scene : (itemSelect === 1 ? goodsImg.brand : (itemSelect === 2 ? goodsImg.order : goodsImg.afterSale))}></RichText>
                 </View>
-                <Block>
-                    <View className="data-v-c50eabf2" wx:if="{{type==='B'}}">
-                        <rich-Text className="data-v-c50eabf2" nodes="{{goodsImg.brand}}"></rich-Text>
-                    </View>
-                    <Block wx:else>
-                        <View className="data-v-c50eabf2" wx:if="{{type==='C'}}">
-                            <rich-Text className="data-v-c50eabf2" nodes="{{goodsImg.order}}"></rich-Text>
-                        </View>
-                        <Block wx:else>
-                            <View className="data-v-c50eabf2" wx:if="{{type==='D'}}">
-                                <rich-Text className="data-v-c50eabf2" nodes="{{goodsImg.afterSale}}"></rich-Text>
-                            </View>
-                        </Block>
-                    </Block>
-                </Block>
             </View>
         </View>
         <View className="addCart data-v-c50eabf2">
             <View className="mean data-v-c50eabf2">
-                <View bindtap="__e" className="list data-v-c50eabf2" data-event-opts="{{[ [ 'tap',[ [ 'mean',['$0'],[ [ ['addCartMean','',index,'name'] ] ] ] ] ] ]}}" wx:for="{{addCartMean}}" wx:key="index">
+                <View className="list data-v-c50eabf2" onClick={mean} wx:for="{{addCartMean}}" wx:key="index">
                     <View className="cart data-v-c50eabf2" wx:if="{{index!==addCartMean.length-1}}">
                         <Image className="data-v-c50eabf2" mode="aspectFit" src="{{item.img}}"></Image>
                         <Text className="cartInfo data-v-c50eabf2">{{ item.name }}</Text>
@@ -117,7 +189,7 @@ export default function Index(props) {
                 </View>
             </View>
         </View>
-    </View>
+    </View >
 
 
 }
