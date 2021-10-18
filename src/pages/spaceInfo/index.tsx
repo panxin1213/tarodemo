@@ -1,12 +1,22 @@
-import { Image, View, Swiper, SwiperItem, Video, Text, Block, Button, Navigator, Input, RichText } from '@tarojs/components'
-import Taro, { useRouter, usePageScroll } from '@tarojs/taro'
+import { Image, View, Swiper, SwiperItem, Video, Text, Button, Navigator, Input, RichText } from '@tarojs/components'
+import Taro, { usePageScroll } from '@tarojs/taro'
 
 import { useState, useEffect } from 'react'
-import { getInfodetail } from '../../common/api'
+import { getInfodetail, getCarNumber } from '../../common/api'
+import { richText2, richText } from '../../common/util'
 import TopBar from '../../components/topbar';
 import videoplay from '../../static/video_play.png';
+import m1 from '../../static/linghongbao.png';
+import m2 from '../../static/tanChuangDelete.png';
+import m3 from '../../static/quickGet.png';
+import isInfo from '../../static/isInfo.png'
+import shoppingCart from '../../static/shoppingCart.png'
+import collect from '../../static/collect.png'
+import customerService from '../../static/customerService.png'
+import haveCollect from '../../static/haveCollect.png'
+import './index.scss'
 
-const serveritems: [{
+const serveritems = [{
     name: "商品详情",
     type: "A"
 }, {
@@ -20,14 +30,34 @@ const serveritems: [{
     type: "D"
 }]
 
+const formatSeconds = (t) => {
+    var e = Math.round(t), o = 0;
+    return e > 60 && (o = parseInt((e / 60) + ""), e = parseInt((e % 60) + "")), "".concat(o > 9 ? (o + "") : "0" + o, "′").concat(e > 9 ? (e + "") : "0" + e, "″");
+}
+
+const explain = [{
+    title: "免费量尺",
+    info: "设计师免费上门量尺"
+}, {
+    title: "免费设计",
+    info: "设计师免费出设计方案"
+}, {
+    title: "免费配送安装",
+    info: "订单满5000元，可享受市区内电梯房免费配送安装服务"
+}, {
+    title: "终身维护",
+    info: "5年质保，终身维护"
+}];
+
+let tvideoContext: any = "";
+
 export default function Index(props) {
     const [showTopBar, setshowTopBar] = useState(false);
     const [swiperList, setswiperList] = useState(new Array<any>());
     const [isPlay, setisPlay] = useState(true);
     const [currentSwiper, setcurrentSwiper] = useState(0);
     const [goodsData, setgoodsData] = useState<any>({});
-    const [videoTime, setvideoTime] = useState(0);
-    const [explain, setexplain] = useState(new Array<any>());
+    const [videoTime, setvideoTime] = useState<any>(0);
     const [itemSelect, setitemSelect] = useState(0);
     const [scene, setscene] = useState('');
     const [goodsImg, setgoodsImg] = useState({
@@ -35,16 +65,68 @@ export default function Index(props) {
         order: "",
         afterSale: ""
     });
+    const [addCartMean, setaddCartMean] = useState([{
+        name: "购物车",
+        img: shoppingCart
+    }, {
+        name: Taro.getStorageSync("detail_collotion") ? "已收藏" : "收藏",
+        img: Taro.getStorageSync("detail_collotion") ? haveCollect : collect
+    }, {
+        name: "客服",
+        img: customerService
+    }]);
+    const [cartSize, setcartSize] = useState(0)
+    const [toggle, settoggle] = useState(1)
+    const [showCover, setshowCover] = useState(false)
+    const [isboxTop2, setisboxTop2] = useState(false)
 
 
+    useEffect(() => {
+        Taro.showLoading();
+        getInfodetail().then((res: any) => {
+            setgoodsData(res.spaceExamples);
+            let videoContext = Taro.createInnerAudioContext();
+            videoContext.volume = 0, videoContext.autoplay = !0, videoContext.src = res.video || "";
+            videoContext.onCanplay(function () {
+                videoContext.duration, videoContext.buffered, setTimeout(function () {
+                    if (1 * videoContext.duration > 0 || 1 * videoContext.buffered > 0) {
+                        setvideoTime(formatSeconds(0 == videoContext.duration ? videoContext.buffered : videoContext.duration));
+                    } else {
+                        setvideoTime("播放");
+                    }
+                    videoContext.destroy();
+                }, 1e3);
+            });
 
+            let images = res.spaceExamples.appletImageUrl;
+
+            if (images) {
+                setswiperList(images.split(",").map(function (t) {
+                    return t;
+                }));
+            }
+
+
+            var s = res.spaceExamples.appletScene, c = res.spaceExamples.brandPower, r = res.spaceExamples.afterSales, d = res.spaceExamples.customProcess;
+            setscene(void 0 === s ? "" : richText2(s));
+            //e.history(e.goodsId, 0, e.goodsData.title), 
+            goodsImg.brand = void 0 === c ? "" : richText(c);
+            goodsImg.afterSale = void 0 === r ? "" : richText(r);
+            goodsImg.order = void 0 === d ? "" : richText(d);
+            setgoodsImg({ ...goodsImg });
+            setTimeout(function () {
+                Taro.hideLoading();
+            }, 300);
+        });
+        setcartSize(getCarNumber() || 0);
+    }, [])
 
 
 
 
 
     usePageScroll(t => {
-        if (t.scrollTop < 550) {
+        if (t.scrollTop < 350) {
             setshowTopBar(false);
         } else {
             setshowTopBar(true);
@@ -53,29 +135,68 @@ export default function Index(props) {
 
 
     const toPlay = () => {
-
+        tvideoContext = Taro.createVideoContext("swiperVideo"), setisPlay(false), tvideoContext.play();
     }
 
     const outPlay = () => {
-
+        tvideoContext.pause();
+        tvideoContext.stop();
+        tvideoContext.seek();
+        tvideoContext = "";
+        setisPlay(true)
     }
 
     const showSelect2 = () => {
+        setshowCover(true);
+        setisboxTop2(true);
+    }
+
+    const toChange = (index) => {
+        setitemSelect(index);
+    }
+
+    const mean = (e) => {
+        if ("收藏" === e) {
+            Taro.setStorageSync("detail_collotion", 1);
+            addCartMean[1]["name"] = "已收藏";
+            addCartMean[1]["img"] = haveCollect;
+            setaddCartMean([...addCartMean]);
+        } else if ("已收藏" === e) {
+            Taro.removeStorageSync("detail_collotion")
+            addCartMean[1]["name"] = "收藏";
+            addCartMean[1]["img"] = collect;
+            setaddCartMean([...addCartMean]);
+        } else if ("购物车" === e) {
+
+        }
 
     }
 
-    const toChange = () => {
+    const order = () => {
+        settoggle(0);
+    }
+
+    const toggleUp = () => {
+        settoggle(1);
+    }
+
+    const order2 = () => {
 
     }
 
-    const mean = () => {
+    const moveHandle: any = () => {
 
+    }
+
+    const close2 = () => {
+        setshowCover(false);
+        setisboxTop2(false);
     }
 
     return <View className="goods data-v-c50eabf2">
         <TopBar className="data-v-c50eabf2" showTopBar={showTopBar} title="方案详情" vueId="1"></TopBar>
-        <View className="Swiper-box data-v-c50eabf2">
-            <Swiper autoplay={true} circular={true} className="data-v-c50eabf2" onChange={
+        <View className="swiper-box data-v-c50eabf2">
+            <Swiper autoplay={false} circular={true} className="swiper data-v-c50eabf2" onChange={
                 (e) => {
                     setcurrentSwiper(e.detail.current);
                 }
@@ -83,7 +204,7 @@ export default function Index(props) {
                 {
 
                     swiperList.map((a: any, index) => {
-                        return <SwiperItem className="data-v-c50eabf2" key={index}>
+                        return <SwiperItem className="swiper-item data-v-c50eabf2" key={index}>
                             <Image className="data-v-c50eabf2" mode="aspectFill" src={a}></Image>
                         </SwiperItem>
                     })
@@ -115,11 +236,11 @@ export default function Index(props) {
         </View>
         <View className="info-box spec data-v-c50eabf2">
             <View className="row data-v-c50eabf2" onClick={showSelect2}>
-                <View className="Text data-v-c50eabf2">服务</View>
+                <View className="text data-v-c50eabf2">服务</View>
                 <View className="content data-v-c50eabf2">
                     {
                         explain.map((item: any, index) => {
-                            return <Text className="data-v-c50eabf2" style={{ marginRight: 10 }} key={index}>{item.title}</Text>
+                            return <Text className="text data-v-c50eabf2" style={{ marginRight: 10 }} key={index}>{item.title}</Text>
                         })
                     }
                 </View>
@@ -129,63 +250,75 @@ export default function Index(props) {
             <View className="items data-v-c50eabf2">
                 {
                     serveritems.map((item: any, index) => {
-                        return <Text className={"flex1 data-v-c50eabf2" + (index === itemSelect ? ' actice' : '')} key={index}>{'' + item.name + ''}</Text>
+                        return <Text onClick={(e) => { e.stopPropagation(); toChange(index) }} className={"flex1 data-v-c50eabf2" + (index === itemSelect ? ' active' : '')} key={index}>{'' + item.name + ''}</Text>
                     })
                 }
             </View>
             <View className="con data-v-c50eabf2">
-                <View className="data-v-c50eabf2">
-                    <RichText className="data-v-c50eabf2" nodes={itemSelect === 0 ? scene : (itemSelect === 1 ? goodsImg.brand : (itemSelect === 2 ? goodsImg.order : goodsImg.afterSale))}></RichText>
+                <View className="con_view data-v-c50eabf2">
+                    <RichText className="rich-text data-v-c50eabf2" nodes={itemSelect === 0 ? scene : (itemSelect === 1 ? goodsImg.brand : (itemSelect === 2 ? goodsImg.order : goodsImg.afterSale))}></RichText>
                 </View>
             </View>
         </View>
         <View className="addCart data-v-c50eabf2">
             <View className="mean data-v-c50eabf2">
-                <View className="list data-v-c50eabf2" onClick={mean} wx:for="{{addCartMean}}" wx:key="index">
-                    <View className="cart data-v-c50eabf2" wx:if="{{index!==addCartMean.length-1}}">
-                        <Image className="data-v-c50eabf2" mode="aspectFit" src="{{item.img}}"></Image>
-                        <Text className="cartInfo data-v-c50eabf2">{{ item.name }}</Text>
-                        <Text className="cartSize data-v-c50eabf2" wx:if="{{index===0&&cartSize!==0}}">{{ cartSize }}</Text>
-                    </View>
-                    <Button className="chat data-v-c50eabf2" openType="contact" wx:if="{{index===addCartMean.length-1}}">
-                        <Image className="data-v-c50eabf2" mode="aspectFit" src="{{item.img}}"></Image>
-                        <Text className="cartInfo data-v-c50eabf2">{{ item.name }}</Text>
-                    </Button>
-                </View>
+                {
+                    addCartMean.map((item: any, index) => {
+                        return <View className="list data-v-c50eabf2" onClick={() => { mean(item.name) }} key={index}>
+                            {
+                                (index !== addCartMean.length - 1) ? <View className="cart data-v-c50eabf2">
+                                    <Image className="data-v-c50eabf2" mode="aspectFit" src={item.img}></Image>
+                                    <Text className="cartInfo data-v-c50eabf2">{item.name}</Text>
+                                    {index === 0 && cartSize !== 0 ? <Text className="cartSize data-v-c50eabf2" >{cartSize}</Text> : ""}
+                                </View> : ""
+                            }
+                            {
+                                index === addCartMean.length - 1 ? <Button className="chat data-v-c50eabf2" openType="contact">
+                                    <Image className="data-v-c50eabf2" mode="aspectFit" src={item.img}></Image>
+                                    <Text className="cartInfo data-v-c50eabf2">{item.name}</Text>
+                                </Button> : ""
+                            }
+                        </View>
+                    })
+                }
             </View>
             <View className="btn data-v-c50eabf2">
-                <View bindtap="__e" className="btns data-v-c50eabf2" data-event-opts="{{[ [ 'tap',[ ['order'] ] ] ]}}">立即预约</View>
+                <View className="btns data-v-c50eabf2" onClick={order}>立即预约</View>
             </View>
         </View>
-        <View className="{{['data-v-c50eabf2',true?'modal':'',toggle===0?'actives':'']}}">
+        <View className={"data-v-c50eabf2 modal" + (toggle === 0 ? ' actives' : '')}>
             <View className="modal-content data-v-c50eabf2">
                 <Navigator className="modal-img data-v-c50eabf2" hoverClass="none" url="#">
-                    <Image lazyLoad className="bgImg data-v-c50eabf2" mode="aspectFill" src="{{$root.m1}}"></Image>
+                    <Image lazyLoad className="bgImg data-v-c50eabf2" mode="aspectFill" src={m1}></Image>
                 </Navigator>
-                <View bindtap="__e" className="modal-close data-v-c50eabf2" data-event-opts="{{[ [ 'tap',[ [ 'toggleUp',[1] ] ] ] ]}}">
-                    <Image lazyLoad className="bgImg data-v-c50eabf2" mode="aspectFill" src="{{$root.m2}}"></Image>
+                <View className="modal-close data-v-c50eabf2" onClick={toggleUp}>
+                    <Image lazyLoad className="bgImg data-v-c50eabf2" mode="aspectFill" src={m2}></Image>
                 </View>
                 <View className="modal-body data-v-c50eabf2">
-                    <Input bindinput="__e" className="uni-Input data-v-c50eabf2" cursorSpacing="140" data-event-opts="{{[ [ 'Input',[ [ '__set_model',[ '','inputName','$event',[] ] ] ] ] ]}}" placeholder="您的姓名" value="{{inputName}}"></Input>
-                    <Input bindinput="__e" className="uni-Input data-v-c50eabf2" cursorSpacing="140" data-event-opts="{{[ [ 'Input',[ [ '__set_model',[ '','inputTel','$event',[] ] ] ] ] ]}}" placeholder="您的联系方式" value="{{inputTel}}"></Input>
+                    <Input className="uni-Input data-v-c50eabf2" cursorSpacing={140} placeholder="您的姓名" />
+                    <Input className="uni-Input data-v-c50eabf2" cursorSpacing={140} placeholder="您的联系方式" />
                 </View>
-                <View bindtap="__e" className="quickGet data-v-c50eabf2" data-event-opts="{{[ [ 'tap',[ [ 'order2',['$event'] ] ] ] ]}}">
-                    <Image lazyLoad className="bgImg data-v-c50eabf2" mode="aspectFill" src="{{$root.m3}}"></Image>
+                <View className="quickGet data-v-c50eabf2" onClick={order2}>
+                    <Image lazyLoad className="bgImg data-v-c50eabf2" mode="aspectFill" src={m3}></Image>
                 </View>
             </View>
         </View>
-        <View className="cover data-v-c50eabf2" wx:if="{{showCover}}"></View>
-        <View catchtouchmove="__e" className="{{['state data-v-c50eabf2',isboxTop2?'boxTop2':'']}}" data-event-opts="{{[ [ 'touchmove',[ [ 'moveHandle',['$event'] ] ] ] ]}}">
-            <View bindtap="__e" className="closeCover data-v-c50eabf2" data-event-opts="{{[ [ 'tap',[ [ 'close2',['$event'] ] ] ] ]}}"></View>
+        {showCover ? <View className="cover data-v-c50eabf2"></View> : ""}
+        <View className={'state data-v-c50eabf2' + (isboxTop2 ? " boxTop2" : "")} catchMove={moveHandle}>
+            <View className="closeCover data-v-c50eabf2" onClick={close2}></View>
             <View className="box data-v-c50eabf2">
-                <View bindtap="__e" className="close data-v-c50eabf2" data-event-opts="{{[ [ 'tap',[ [ 'close2',['$event'] ] ] ] ]}}">×</View>
+                <View className="close data-v-c50eabf2" onClick={close2}>×</View>
                 <View className="title data-v-c50eabf2">说明</View>
                 <View className="list data-v-c50eabf2">
-                    <View className="listItem data-v-c50eabf2" wx:for="{{explain}}" wx:key="index">
-                        <View className="itemImg data-v-c50eabf2">
-                            <Image className="data-v-c50eabf2" mode="aspectFit" src="../../static/isInfo.png"></Image>{{ ''+item.title + '' }}</View>
-                        <View className="itemKws data-v-c50eabf2">{{ item.info }}</View>
-                    </View>
+                    {
+                        explain.map((item, index) => {
+                            return <View className="listItem data-v-c50eabf2" key={index}>
+                                <View className="itemImg data-v-c50eabf2">
+                                    <Image className="data-v-c50eabf2" mode="aspectFit" src={isInfo}></Image>{'' + item.title + ''}</View>
+                                <View className="itemKws data-v-c50eabf2">{item.info}</View>
+                            </View>
+                        })
+                    }
                 </View>
             </View>
         </View>

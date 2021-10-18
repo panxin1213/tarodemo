@@ -1,6 +1,7 @@
-import { View } from '@tarojs/components'
+import { View, Text } from '@tarojs/components'
 import { useState, useEffect } from 'react'
 import Taro from '@tarojs/taro'
+import './index.scss'
 
 export default function Index(props) {
     const [option, setoption] = useState({ height: 0, top: 0 })
@@ -15,8 +16,12 @@ export default function Index(props) {
         }
         Taro.getSystemInfo({
             success: function (t) {
-                var o = Taro.getMenuButtonBoundingClientRect();
-                setoption({ height: o.top + 32, top: o.top });
+                if (process.env.TARO_ENV !== 'h5') {
+                    var o = Taro.getMenuButtonBoundingClientRect();
+                    setoption({ height: o.top + 32, top: o.top });
+                } else {
+                    setoption({ height: 32, top: 10 });
+                }
             }
         });
     }, [])
@@ -33,16 +38,16 @@ export default function Index(props) {
         });
     }
 
-    return <View className={"topBar data-v-7cec76db" + (props.showTopBar ? "showTopBar" : "")} style={{ height: option.height }} >
+    return <View className={"topBar data-v-7cec76db" + (props.showTopBar ? " showTopBar" : "")} style={{ height: option.height }} >
         <View className="con data-v-7cec76db">
             {
                 tohome ? <View className="home_box data-v-7cec76db" style={{ top: option.top }} onClick={toHome}>
                     <View className="home data-v-7cec76db"></View>
-                </View> : <View className="arrow data-v-7cec76db" style={'top:' + option.top + 'px' + ';'} onClick={back}>
+                </View> : <View className="arrow data-v-7cec76db" style={{ top: option.top }} onClick={back}>
                     <View className="back data-v-7cec76db"></View>
                 </View>
             }
-            <text className="title data-v-7cec76db" style={{ top: option.top }}>{'' + props.title + ''}</text>
+            <Text className="title data-v-7cec76db" style={{ top: option.top }}>{'' + props.title + ''}</Text>
         </View>
     </View >
 

@@ -67,3 +67,9 @@ export function getInfodetail() {
         type: "infodetail"
     });
 }
+
+
+
+export function getCarNumber() {
+    return Taro.getStorageSync("carnumber");
+}
