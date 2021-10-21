@@ -1,0 +1,236 @@
+page,
+.setting-content {
+    background: #f6f6f6;
+}
+
+.setting-content {
+    padding-top: 20rpx;
+}
+
+.setting-content .box-one {
+    padding: 0 20rpx;
+    background: #fff;
+}
+
+.setting-content .box-one .avatar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 150rpx;
+}
+
+.setting-content .box-one .avatar .word {
+    color: #666;
+    font-size: 30rpx;
+}
+
+.setting-content .box-one .avatar .image {
+    width: 80rpx;
+}
+
+.setting-content .box-one .avatar .image image,
+.setting-content .box-one .avatar .image img {
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 6rpx;
+}
+
+.setting-content .box-one .account {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100rpx;
+    color: #666;
+    font-size: 30rpx;
+    border-top: 2rpx solid #eee;
+    border-bottom: 2rpx solid #eee;
+}
+
+.setting-content .box-one .account .second {
+    width: 300rpx;
+    text-align: right;
+}
+
+.setting-content .box-one .pet-name {
+    color: #666;
+    font-size: 30rpx;
+}
+
+.setting-content .box-one .pet-name .nav {
+    width: 100%;
+    height: 100rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.setting-content .box-one .pet-name .nav .first {
+    flex: 0.2;
+}
+
+.setting-content .box-one .pet-name .nav .second {
+    flex: 0.8;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.setting-content .box-one .pet-name .nav .second .text {
+    padding-right: 20rpx;
+    width: 100%;
+}
+
+.setting-content .box-one .pet-name .nav .second:after {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-top: 1px solid #666;
+    border-left: 1px solid #666;
+    transform: rotate(-225deg);
+}
+
+.setting-content .account-safe {
+    height: 100rpx;
+    padding: 50rpx 0 28rpx 20rpx;
+    color: #999;
+    font-size: 30rpx;
+    box-sizing: border-box;
+}
+
+.setting-content .box-two {
+    padding: 0 20rpx;
+    background: #fff;
+}
+
+.setting-content .box-two .bind-Telphone {
+    color: #666;
+    font-size: 30rpx;
+}
+
+.setting-content .box-two .bind-Telphone .nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100rpx;
+}
+
+.setting-content .box-two .bind-Telphone .nav .first {
+    flex: 0.3;
+}
+
+.setting-content .box-two .bind-Telphone .nav .second {
+    flex: 0.7;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.setting-content .box-two .bind-Telphone .nav .second .text {
+    padding-right: 20rpx;
+    width: 100%;
+}
+
+.setting-content .box-two .bind-Telphone .nav .second:after {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-top: 1px solid #666;
+    border-left: 1px solid #666;
+    transform: rotate(-225deg);
+}
+
+.setting-content .box-two .modify {
+    border-top: 1px solid #eee;
+}
+
+.setting-content .box-three {
+    padding: 0 20rpx;
+    margin-top: 20rpx;
+    background: #fff;
+}
+
+.setting-content .box-three .shiping-address {
+    color: #666;
+    font-size: 30rpx;
+    height: 100rpx;
+}
+
+.setting-content .box-three .shiping-address .quit {
+    height: 100rpx;
+    line-height: 100rpx;
+}
+
+.setting-content .box-three .shiping-address .nav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100rpx;
+}
+
+.setting-content .box-three .shiping-address .nav .second {
+    flex: 0.8;
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.setting-content .box-three .shiping-address .nav .second .text {
+    padding-right: 20rpx;
+    width: 100%;
+}
+
+.setting-content .box-three .shiping-address .nav .second:after {
+    content: "";
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-top: 1px solid #666;
+    border-left: 1px solid #666;
+    transform: rotate(-225deg);
+}
+
+.setting-content .box-three .modify {
+    border-top: 1px solid #eee;
+}
+
+.setting-content .box-avatar {
+    width: 100%;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, .3);
+    padding: 0 20rpx 40rpx;
+}
+
+.setting-content .box-avatar .avatar-button {
+    background-color: #fff;
+    color: #000;
+    font-size: 32rpx;
+    border-radius: 0;
+    height: 80rpx;
+    line-height: 80rpx;
+}
+
+.setting-content .box-avatar .avatar-button:first-child {
+    border-radius: 8rpx 8rpx 0 0;
+}
+
+.setting-content .box-avatar .avatar-button:nth-child(2) {
+    border-radius: 0 0 8rpx 8rpx;
+    border-top: 1px solid #ccc;
+}
+
+.setting-content .box-avatar .avatar-button:last-child {
+    border-radius: 8rpx 8rpx 8rpx 8rpx;
+    margin-top: 20rpx;
+}
+
+.setting-content .box-avatar .avatar-button:after {
+    border-radius: 0;
+    border: none;
+}

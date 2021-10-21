@@ -1,13 +1,33 @@
 export default {
   pages: [
+    "pages/mine/index",
     'pages/index/index',
     'pages/classify/index',
     'pages/cart/index',
     'pages/store/index',
-    "pages/mine/index",
     "pages/active/index",
     "pages/spaceInfo/index",
-    "pages/searchlist/index"
+    "pages/spaceCustomization/spaceCustomization",
+    "pages/searchlist/index",
+    "pages/housing/housing",
+    "pages/appliances/appliances",
+    "pages/selectStore/selectStore",
+    "pages/hotProduct/hotProduct",
+    "pages/login/login",
+  ],
+  "subpackages": [
+    {
+      "root": "pagesMine/",
+      "pages": [
+        "lastestNews/lastestNews",
+        "helpCenter/helpCenter",
+        "questionDetail/questionDetail",
+        "setting/setting",
+        "order/order",
+        "investment/investment",
+        "myFavorite/myFavorite"
+      ]
+    }
   ],
   window: {
     backgroundTextStyle: 'light',

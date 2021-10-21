@@ -1,0 +1,88 @@
+.itemList {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 20px;
+    background: #f6f6f6;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.spaceCustomization .itemList {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 180px 20px 0;
+    background: #f6f6f6;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.hotProduct .itemList {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 100px 20px 0;
+    background: #f6f6f6;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.itemList .item {
+    width: 345px;
+    display: flex;
+    background: #fff;
+    margin-right: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.itemList .item .views {
+    width: 100%;
+}
+
+.itemList .item:nth-child(2n) {
+    margin-right: 0px;
+}
+
+.itemList .item .itemImg,
+.itemList .item .itemImg img {
+    width: 100%;
+    height: 325px;
+    display: block;
+}
+
+.itemList .item .titles {
+    line-height: 42px;
+    height: 42px;
+    color: #333;
+}
+
+.itemList .item .tip,
+.itemList .item .titles {
+    width: 100%;
+    box-sizing: border-box;
+    font-size: 26px;
+    padding: 0 20px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+.itemList .item .tip {
+    line-height: 26px;
+    height: 26px;
+    color: #999;
+    margin-top: 10px;
+}
+
+.itemList .item .price {
+    width: 100%;
+    line-height: 26px;
+    height: 26px;
+    box-sizing: border-box;
+    color: #e92124;
+    font-size: 26px;
+    padding: 0 20px;
+    margin-top: 24px;
+    display: block;
+}

@@ -1,0 +1,133 @@
+.flex-wrap.data-v-8ea74568 {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.flex-wrap .flex1.data-v-8ea74568 {
+    flex: 1;
+}
+
+.flex-wrap .list-wrap.data-v-8ea74568 {
+    padding: 20px;
+}
+
+.flex-wrap .list-wrap .list.data-v-8ea74568 {
+    height: 150px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    border-radius: 8px;
+    padding: 0 30px;
+    margin-bottom: 20px;
+}
+
+.flex-wrap .list-wrap .list image,
+.flex-wrap .list-wrap .list img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.flex-wrap .list-wrap .list .company.data-v-8ea74568 {
+    font-size: 30px;
+    color: #333;
+    line-height: 48px;
+}
+
+.flex-wrap .list-wrap .list .address.data-v-8ea74568 {
+    font-size: 26px;
+    color: #999;
+    line-height: 46px;
+}
+
+.flex-wrap .list-wrap .list radio.data-v-8ea74568 {
+    display: none;
+}
+
+.flex-wrap .list-wrap .list .icon.data-v-8ea74568 {
+    width: 40px;
+    height: 40px;
+    background: url(https://mapi.snimay.com/file/static/mall1/share/uncheck.png) no-repeat 50%;
+    background-size: cover;
+}
+
+.flex-wrap .list-wrap .checked .icon.data-v-8ea74568 {
+    background: url(https://mapi.snimay.com/file/static/mall1/share/checked.png) no-repeat 50%;
+    background-size: cover;
+}
+
+.flex-wrap .book.data-v-8ea74568 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 150px;
+    background: #fff;
+}
+
+.flex-wrap .book image,
+.flex-wrap .book img {
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+}
+
+.flex-wrap .book .name.data-v-8ea74568 {
+    font-size: 32px;
+    line-height: 50px;
+    color: #000;
+}
+
+.flex-wrap .book .job.data-v-8ea74568 {
+    font-size: 26px;
+    line-height: 42px;
+    color: #999;
+}
+
+.flex-wrap .book .button.data-v-8ea74568 {
+    font-size: 30px;
+    color: #e92124;
+}
+
+.flex-wrap .change.data-v-8ea74568 {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0 50px;
+    height: 160px;
+    background: #fff;
+    font-size: 24px;
+}
+
+.flex-wrap .change .empty.data-v-8ea74568 {
+    width: 200px;
+    height: 100px;
+}
+
+.flex-wrap .change .btn.data-v-8ea74568 {
+    width: 200px;
+    line-height: 60px;
+    text-align: center;
+    border-radius: 60px;
+    background: #e92124;
+    color: #fff;
+    margin-left: 10px;
+}
+
+.none.data-v-8ea74568 {
+    padding-top: 200px;
+    text-align: center;
+    line-height: 100px;
+    color: #ccc;
+    font-size: 24px;
+}
+
+.none image,
+.none img {
+    width: 270px;
+    height: 180px;
+    display: block;
+    margin: 0 auto;
+}

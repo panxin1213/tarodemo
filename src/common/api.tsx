@@ -73,3 +73,35 @@ export function getInfodetail() {
 export function getCarNumber() {
     return Taro.getStorageSync("carnumber");
 }
+
+
+export function getShopList() {
+    return get({
+        type: "storelist"
+    });
+}
+
+export function getQuestionCategoryList() {
+    return get({
+        type: "questioncategorylist"
+    });
+}
+
+
+export function getOrderList() {
+    return get({
+        type: "orderlist"
+    });
+}
+
+export function getShoucangList() {
+    return get({
+        type: "shoucanglist"
+    });
+}
+
+export function getSheJiShoucangList() {
+    return get({
+        type: "shejishoucang"
+    });
+}

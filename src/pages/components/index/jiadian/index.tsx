@@ -14,7 +14,7 @@ export default function Jiadian(props) {
                         <View className="uni-product-list">
                             {
                                 a.data.map((product: any, index) => {
-                                    const url = (product.goodsType === 0 ? "/pagesB/goods/goods?goodsId=" : (product.goodsType === 1 ? "/pagesB/wallpaper/wallpaper?goodsId=" : "/pagesB/curtain/curtain?goodsId=")) + product.goodsId;
+                                    const url = (product.goodsType === 0 ? "/pages/spaceInfo/index?id=" : (product.goodsType === 1 ? "/pages/spaceInfo/index?id=" : "/pages/spaceInfo/index?id=")) + product.goodsId;
                                     return <View className="uni-product" key={index}>
                                         <View className="image-view">
                                             <Navigator hoverClass="none" url={url}>

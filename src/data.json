@@ -5102,5 +5102,377 @@
                 "tag": "免费测量设计,全国送装,5年质保"
             }
         ]
-    }
+    },
+    "storelist": [
+        {
+            "area_name": "岳麓区",
+            "legal_person": "植新仪 ",
+            "city_name": "长沙市",
+            "address": "湖南省长沙市岳麓区区县岳麓大道红星美凯龙街道",
+            "phone": "18973139137",
+            "tencent_lat": 28.225630,
+            "short_name": "湖南岳麓植新仪",
+            "id": 14199719,
+            "tencent_lng": 112.949348,
+            "user_distance": 13108,
+            "province_name": "湖南省"
+        },
+        {
+            "area_name": "望城区",
+            "legal_person": "张科",
+            "city_name": "长沙市",
+            "address": "长沙市望城区金桥国际高星物流园二期3-10栋125号诗尼曼家居",
+            "phone": "17708494272",
+            "tencent_lat": 28.306490,
+            "short_name": "湖南望城张科",
+            "id": 14199877,
+            "tencent_lng": 112.838400,
+            "user_distance": 27104,
+            "province_name": "湖南省"
+        },
+        {
+            "area_name": "开福区",
+            "legal_person": "彭春华",
+            "city_name": "长沙市",
+            "address": "湖南省长沙市开福区红星美凯龙",
+            "phone": "18676742726",
+            "tencent_lat": 28.281281,
+            "short_name": "湖南开福彭春华",
+            "id": 14010877,
+            "tencent_lng": 112.566177,
+            "user_distance": 48768,
+            "province_name": "湖南省"
+        }
+    ],
+    "questioncategorylist": [
+        {
+            "name": "猜你想问",
+            "id": 1,
+            "data": [
+                {
+                    "name": "为什么我的订单会被拆分？",
+                    "id": 2
+                },
+                {
+                    "name": "为什么查询不到配送信息？",
+                    "id": 3
+                },
+                {
+                    "name": "发货时间需要多久？",
+                    "id": 4
+                },
+                {
+                    "name": "如何收取运费？",
+                    "id": 5
+                }
+            ]
+        },
+        {
+            "name": "配送安装",
+            "id": 6,
+            "data": [
+                {
+                    "name": "哪些区域可以配送安装？",
+                    "id": 7
+                },
+                {
+                    "name": "发货后几天才能收到货？",
+                    "id": 8
+                }
+            ]
+        },
+        {
+            "name": "售后服务",
+            "id": 9,
+            "data": [
+                {
+                    "name": "发现商品包装破损怎么办？",
+                    "id": 10
+                },
+                {
+                    "name": "产品保修多久？",
+                    "id": 11
+                }
+            ]
+        },
+        {
+            "name": "商品咨询",
+            "id": 12,
+            "data": [
+                {
+                    "name": "商品有色差怎么办？",
+                    "id": 14
+                }
+            ]
+        }
+    ],
+    "orderlist": [
+        {
+            "orderNumber": "20211021110810001",
+            "realName": "张三",
+            "payUserName": "panxin1213",
+            "orderGoodsItems": [
+                {
+                    "appletObjectImage": "https://image.snimay.com/userfiles/images/woshi001.jpg",
+                    "goodsName": "诗尼曼蝶恋花系列全屋定制",
+                    "specName": "全国送装",
+                    "goodsNum": 10,
+                    "origPrice": 100,
+                    "goodsList": [
+                        "https://image.snimay.com/applet/spaceImage/20210322/0pvfne.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/t6vrtt.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/z6o7z6.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/bcattc.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/78g4zf.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/s23e09.jpg"
+                    ]
+                },
+                {
+                    "appletObjectImage": "https://image.snimay.com/userfiles/images/woshi001.jpg",
+                    "goodsName": "诗尼曼蝶恋花系列全屋定制2",
+                    "specName": "全国送装",
+                    "goodsNum": 10,
+                    "origPrice": 100,
+                    "goodsList": [
+                        "https://image.snimay.com/applet/spaceImage/20210322/0pvfne.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/t6vrtt.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/z6o7z6.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/bcattc.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/78g4zf.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/s23e09.jpg"
+                    ]
+                },
+                {
+                    "appletObjectImage": "https://image.snimay.com/userfiles/images/woshi001.jpg",
+                    "goodsName": "诗尼曼蝶恋花系列全屋定制3",
+                    "specName": "全国送装",
+                    "goodsNum": 10,
+                    "origPrice": 100,
+                    "goodsList": [
+                        "https://image.snimay.com/applet/spaceImage/20210322/0pvfne.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/t6vrtt.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/z6o7z6.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/bcattc.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/78g4zf.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/s23e09.jpg"
+                    ]
+                }
+            ],
+            "crmUserName": "张三",
+            "crmUserPhone": "18182106944",
+            "crmUserAddress": "湖南省长沙市天心区",
+            "buildingName": "九峰小区",
+            "building": "湖南省天心区",
+            "realEstate": "桂花坪街道",
+            "status": 1,
+            "totalPrice": 1000,
+            "createDate": "2021-10-21 12:23:25"
+        },
+        {
+            "orderNumber": "20211021110810001",
+            "realName": "张三",
+            "payUserName": "panxin1213",
+            "orderGoodsItems": [
+                {
+                    "appletObjectImage": "https://image.snimay.com/userfiles/images/woshi001.jpg",
+                    "goodsName": "诗尼曼蝶恋花系列全屋定制",
+                    "specName": "全国送装",
+                    "goodsNum": 10,
+                    "origPrice": 100,
+                    "goodsList": [
+                        "https://image.snimay.com/applet/spaceImage/20210322/0pvfne.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/t6vrtt.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/z6o7z6.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/bcattc.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/78g4zf.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/s23e09.jpg"
+                    ]
+                },
+                {
+                    "appletObjectImage": "https://image.snimay.com/userfiles/images/woshi001.jpg",
+                    "goodsName": "诗尼曼蝶恋花系列全屋定制2",
+                    "specName": "全国送装",
+                    "goodsNum": 10,
+                    "origPrice": 100,
+                    "goodsList": [
+                        "https://image.snimay.com/applet/spaceImage/20210322/0pvfne.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/t6vrtt.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/z6o7z6.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/bcattc.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/78g4zf.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/s23e09.jpg"
+                    ]
+                },
+                {
+                    "appletObjectImage": "https://image.snimay.com/userfiles/images/woshi001.jpg",
+                    "goodsName": "诗尼曼蝶恋花系列全屋定制3",
+                    "specName": "全国送装",
+                    "goodsNum": 10,
+                    "origPrice": 100,
+                    "goodsList": [
+                        "https://image.snimay.com/applet/spaceImage/20210322/0pvfne.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/t6vrtt.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/z6o7z6.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/bcattc.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/78g4zf.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/s23e09.jpg"
+                    ]
+                }
+            ],
+            "crmUserName": "张三",
+            "crmUserPhone": "18182106944",
+            "crmUserAddress": "湖南省长沙市天心区",
+            "buildingName": "九峰小区",
+            "building": "湖南省天心区",
+            "realEstate": "桂花坪街道",
+            "status": 1,
+            "totalPrice": 1000,
+            "createDate": "2021-10-21 12:23:25"
+        },
+        {
+            "orderNumber": "20211021110810001",
+            "realName": "张三",
+            "payUserName": "panxin1213",
+            "orderGoodsItems": [
+                {
+                    "appletObjectImage": "https://image.snimay.com/userfiles/images/woshi001.jpg",
+                    "goodsName": "诗尼曼蝶恋花系列全屋定制",
+                    "specName": "全国送装",
+                    "goodsNum": 10,
+                    "origPrice": 100,
+                    "goodsList": [
+                        "https://image.snimay.com/applet/spaceImage/20210322/0pvfne.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/t6vrtt.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/z6o7z6.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/bcattc.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/78g4zf.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/s23e09.jpg"
+                    ]
+                },
+                {
+                    "appletObjectImage": "https://image.snimay.com/userfiles/images/woshi001.jpg",
+                    "goodsName": "诗尼曼蝶恋花系列全屋定制2",
+                    "specName": "全国送装",
+                    "goodsNum": 10,
+                    "origPrice": 100,
+                    "goodsList": [
+                        "https://image.snimay.com/applet/spaceImage/20210322/0pvfne.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/t6vrtt.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/z6o7z6.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/bcattc.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/78g4zf.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/s23e09.jpg"
+                    ]
+                },
+                {
+                    "appletObjectImage": "https://image.snimay.com/userfiles/images/woshi001.jpg",
+                    "goodsName": "诗尼曼蝶恋花系列全屋定制3",
+                    "specName": "全国送装",
+                    "goodsNum": 10,
+                    "origPrice": 100,
+                    "goodsList": [
+                        "https://image.snimay.com/applet/spaceImage/20210322/0pvfne.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/t6vrtt.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/z6o7z6.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/bcattc.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/78g4zf.jpg",
+                        "https://image.snimay.com/applet/spaceImage/20210322/s23e09.jpg"
+                    ]
+                }
+            ],
+            "crmUserName": "张三",
+            "crmUserPhone": "18182106944",
+            "crmUserAddress": "湖南省长沙市天心区",
+            "buildingName": "九峰小区",
+            "building": "湖南省天心区",
+            "realEstate": "桂花坪街道",
+            "status": 1,
+            "totalPrice": 1000,
+            "createDate": "2021-10-21 12:23:25"
+        }
+    ],
+    "shoucanglist": [
+        {
+            "price": 100,
+            "goodsId": 1746,
+            "imageUrl": "https://image.snimay.com/applet/spaceObject/20210322/b5m317.jpg",
+            "id": 3092,
+            "type": 2,
+            "goodsName": "诗尼曼全屋餐边柜酒柜定制现代轻奢可伸缩客餐厅收纳吧台整体定做"
+        },
+        {
+            "price": 3880.0000,
+            "goodsId": 5115,
+            "imageUrl": "https://image.snimay.com/applet/productObject/20190821/qci189.jpg",
+            "id": 3091,
+            "type": 1,
+            "goodsName": "智弧SL-Z2智能锁"
+        },
+        {
+            "price": 5038.0000,
+            "goodsId": 2982,
+            "imageUrl": "https://image.snimay.com/applet/productObject/20191105/3nxlao.jpg",
+            "id": 3090,
+            "type": 1,
+            "goodsName": "现代风格 百搭时尚 小中大户型私享 时尚纳米绒面料可拆洗布艺床 1800*2000 米咖色40（维拉_CH-B1865）"
+        },
+        {
+            "price": 24998,
+            "goodsId": 60,
+            "imageUrl": "https://image.snimay.com/applet/fullyFurnishedDetails/20190821/wk23ze.jpg",
+            "id": 3089,
+            "type": 3,
+            "goodsName": "长安-融发中心 一房一厅现代风格全屋家具定制"
+        },
+        {
+            "price": 26800,
+            "goodsId": 1849,
+            "imageUrl": "https://image.snimay.com/20210720/201612524wk0.jpg",
+            "id": 3088,
+            "type": 2,
+            "goodsName": "格芮系列全屋定制"
+        }
+    ],
+    "shejishoucang": [
+        {
+            "price": 100,
+            "goodsId": 1746,
+            "good_img": "https://image.snimay.com/applet/spaceObject/20210322/b5m317.jpg",
+            "id": 3092,
+            "type": 2,
+            "good_name": "诗尼曼全屋餐边柜酒柜定制现代轻奢可伸缩客餐厅收纳吧台整体定做"
+        },
+        {
+            "price": 3880.0000,
+            "goodsId": 5115,
+            "good_img": "https://image.snimay.com/applet/productObject/20190821/qci189.jpg",
+            "id": 3091,
+            "type": 1,
+            "good_name": "智弧SL-Z2智能锁"
+        },
+        {
+            "price": 5038.0000,
+            "goodsId": 2982,
+            "good_img": "https://image.snimay.com/applet/productObject/20191105/3nxlao.jpg",
+            "id": 3090,
+            "type": 1,
+            "good_name": "现代风格 百搭时尚 小中大户型私享 时尚纳米绒面料可拆洗布艺床 1800*2000 米咖色40（维拉_CH-B1865）"
+        },
+        {
+            "price": 24998,
+            "goodsId": 60,
+            "good_img": "https://image.snimay.com/applet/fullyFurnishedDetails/20190821/wk23ze.jpg",
+            "id": 3089,
+            "type": 3,
+            "good_name": "长安-融发中心 一房一厅现代风格全屋家具定制"
+        },
+        {
+            "price": 26800,
+            "goodsId": 1849,
+            "good_img": "https://image.snimay.com/20210720/201612524wk0.jpg",
+            "id": 3088,
+            "type": 2,
+            "good_name": "格芮系列全屋定制"
+        }
+    ]
 }

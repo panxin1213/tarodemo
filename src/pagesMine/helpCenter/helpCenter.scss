@@ -1,0 +1,173 @@
+page,
+.helpCenter-content {
+    background: #f6f6f6;
+}
+
+.helpCenter-content .tab {
+    height: 100rpx;
+    width: 100%;
+    background: #fff;
+    padding: 0 20rpx;
+    font-size: 24rpx;
+    line-height: 100rpx;
+    text-align: center;
+    color: #666;
+    margin-bottom: 22rpx;
+    box-sizing: border-box;
+}
+
+.helpCenter-content .tab .second {
+    width: 120rpx;
+    float: left;
+}
+
+.helpCenter-content .tab .cur {
+    color: #e92124;
+    position: relative;
+}
+
+.helpCenter-content .tab .cur .view {
+    width: 30rpx;
+    height: 2rpx;
+    background: #e92124;
+    position: absolute;
+    bottom: 10rpx;
+    left: 50%;
+    margin-left: -15rpx;
+}
+
+.helpCenter-content .problems {
+    padding: 40rpx 20rpx;
+    background: #fff;
+    margin-bottom: 20rpx;
+}
+
+.helpCenter-content .problems .title {
+    font-size: 24rpx;
+    color: #666;
+    margin-bottom: 30rpx;
+}
+
+.helpCenter-content .problems .content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+.helpCenter-content .problems .content .item {
+    width: 150rpx;
+    height: 60rpx;
+    border-radius: 10rpx;
+    border: 1px solid #aaa;
+    text-align: center;
+    line-height: 60rpx;
+    background: #f6f6f6;
+    color: #666;
+    font-size: 24rpx;
+    margin-bottom: 20rpx;
+}
+
+.helpCenter-content .problems .content .active {
+    color: #e92124;
+    border: 1px solid #e92124;
+    background: #fcecec;
+}
+
+.helpCenter-content .kindsProblems {
+    background: #fff;
+}
+
+.helpCenter-content .kindsProblems .kind-item {
+    height: 80rpx;
+    margin: 0 20rpx 0 40rpx;
+    line-height: 80rpx;
+    font-size: 24rpx;
+    color: #666;
+    position: relative;
+    border-bottom: 1px solid #eee;
+    box-sizing: border-box;
+}
+
+.helpCenter-content .kindsProblems .kind-item:after {
+    content: "";
+    position: absolute;
+    right: 20rpx;
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    top: 50%;
+    margin-top: -4px;
+    border-top: 1px solid #656565;
+    border-left: 1px solid #656565;
+    transform: rotate(-225deg);
+}
+
+.helpCenter-content .opinion {
+    padding: 30rpx 0rpx 0rpx 30rpx;
+    background: #fff;
+    box-sizing: border-box;
+}
+
+.helpCenter-content .opinion .content {
+    font-size: 22rpx;
+    line-height: 40rpx;
+}
+
+.helpCenter-content .opinion .content .text-area {
+    width: 97%;
+}
+
+.helpCenter-content .uni-common-mt {
+    background: #fff;
+    padding: 30rpx;
+}
+
+.helpCenter-content .uni-common-mt .uni-uploader__files .uni-uploader__file {
+    float: left;
+    margin-left: 10rpx;
+    position: relative;
+}
+
+.helpCenter-content .uni-common-mt .uni-uploader__files .uni-uploader__file image,
+.helpCenter-content .uni-common-mt .uni-uploader__files .uni-uploader__file img {
+    width: 100rpx;
+    height: 100rpx;
+}
+
+.helpCenter-content .uni-common-mt .uni-uploader__files .uni-uploader__file .error {
+    width: 26rpx;
+    height: 26rpx;
+    line-height: 20rpx;
+    text-align: center;
+    background: #e92124;
+    color: #fff;
+    border-radius: 50%;
+    font-size: 16rpx;
+    position: absolute;
+    right: 0rpx;
+    top: 0rpx;
+}
+
+.helpCenter-content .uni-common-mt .uni-uploader__input-box .uni-uploader__input image,
+.helpCenter-content .uni-common-mt .uni-uploader__input-box .uni-uploader__input img {
+    width: 100rpx;
+    height: 100rpx;
+    margin-left: 30rpx;
+}
+
+.helpCenter-content .inform {
+    width: 692rpx;
+    height: 80rpx;
+    background: #e92124;
+    text-align: center;
+    line-height: 80rpx;
+    border-radius: 40rpx;
+    color: #fff;
+    font-size: 24rpx;
+    position: fixed;
+    left: 50%;
+    margin-left: -346rpx;
+    bottom: 40rpx;
+}

@@ -1,4 +1,5 @@
 import { View, Text, Image, Swiper, SwiperItem, Navigator, Button } from '@tarojs/components'
+import Taro from '@tarojs/taro'
 import { useState, useEffect } from 'react'
 import './index.scss'
 import sousuo from '../../static/SY-vav-sousuo.png';
@@ -41,7 +42,7 @@ export default function Index() {
 
     getGoodist().then((a: []) => {
       const arr: any = a.map((a: any) => {
-        return { title: a.title, img: a.imageUrl, url: '/pagesB/spaceInfo/spaceInfo?goodsId=' + a.goodsId }
+        return { title: a.title, img: a.imageUrl, url: '/pages/spaceInfo/index?id=' + a.goodsId }
       });
       setgoodlist(arr);
     });
@@ -49,6 +50,29 @@ export default function Index() {
 
   }, []);
 
+  const phoneStoreBind = () => {
+    Taro.navigateTo({
+      url: '/pages/selectStore/selectStore'
+    })
+  }
+
+  const Binding = (n) => {
+    "book" == n ? phoneStoreBind() : "video" == n ? Taro.navigateToMiniProgram({
+      appId: "wx92d650b253f8f2e3",
+      path: "pages/index/index?zbid=1274844423",
+      extraData: {},
+      success: function (t) {
+        console.log("upToTap", t);
+      }
+    }) : "share" == n && Taro.navigateToMiniProgram({
+      appId: "wx10a594a813a30a7c",
+      path: "pages/index/index?orgId=3FO4K4U35TW3",
+      extraData: {},
+      success: function (t) {
+        console.log("upToTap", t);
+      }
+    });
+  }
 
   return (
     <View className="index-container">
@@ -94,23 +118,35 @@ export default function Index() {
               <Text className="index-nav-box-view-text">家居家电</Text>
             </Navigator>
           </View>
-          <View className="index-nav-box-view">
+          <View className="index-nav-box-view" onClick={
+            () => {
+              Taro.navigateTo({
+                url: "/pages/active/index?path=".concat(encodeURIComponent("https://www.snimay.com/activity/details-283.shtml?source=1069&hd_name=%E5%B0%8F%E7%A8%8B%E5%BA%8F%E4%B8%93%E9%A2%98"), "&title=", "0元设计")
+              });
+            }
+          }>
             <Image lazyLoad mode="aspectFill" src={m3}></Image>
             <Text className="index-nav-box-view-text">0元设计</Text>
           </View>
         </View>
         <View className="index-nav-box">
-          <View className="index-nav-box-view">
+          <View className="index-nav-box-view" onClick={
+            () => { Binding("share") }
+          }>
             <View>
               <Image lazyLoad mode="aspectFill" src={m4}></Image>
               <Text className="index-nav-box-view-text">分享家</Text>
             </View>
           </View>
-          <View className="index-nav-box-view">
+          <View className="index-nav-box-view" onClick={
+            () => { Binding("book") }
+          }>
             <Image lazyLoad mode="aspectFill" src={m5}></Image>
             <Text className="index-nav-box-view-text">预约定制</Text>
           </View>
-          <View className="index-nav-box-view">
+          <View className="index-nav-box-view" onClick={
+            () => { Binding("video") }
+          }>
             <View>
               <Image lazyLoad mode="aspectFill" src={m6} className="miWA"></Image>
               <Text className="index-nav-box-view-text">分会场</Text>
@@ -134,7 +170,7 @@ export default function Index() {
             {
               hotlist.map((item: any, index) => {
                 return <View className="hotContent-children" key={index}>
-                  <Navigator hoverClass="none" url={'/pagesB/spaceInfo_hot/spaceInfo_hot?goodsId=' + item.goodsId}>
+                  <Navigator hoverClass="none" url={'/pages/spaceInfo/index?id=' + item.goodsId}>
                     <Image lazyLoad mode={process.env.TARO_ENV === 'h5' ? "aspectFit" : "aspectFill"} src={item.imageUrl}></Image>
                     <View className="title">{item.title}</View>
                     <View className="hot-moery">
@@ -151,13 +187,14 @@ export default function Index() {
           </View>
         </View>
       }
-      {goodlist && goodlist.length && <View className="projectTab">
-        <Navigator className="project-Title" hoverClass="none" url="/pages/spaceCustomization/spaceCustomization">
-          <Text>空间定制</Text>
-          <Image lazyLoad className="on" mode="aspectFill" src={m8}></Image>
-        </Navigator>
-        <TabSwiper data={goodlist} />
-        {/* <wuc-tab textFlex backgroundColor="#fff" bind:__l="__l" bind:updateTabCur="__e" data-event-opts="{{[ [ '^updateTabCur',[ [ '__set_sync',['$0','TabCur','$event'],[''] ] ] ],[ '^updateTabCur',[ [ '__set_sync',['$0','TabCur','$event'],[''] ] ] ] ]}}" fontColor="#333" selectBottom="10rpx" selectColor="#E92124" selectwidth="30rpx" tabList="{{tabList}}" tabCur="{{TabCur}}" vueId="1"></wuc-tab>
+      {
+        goodlist && goodlist.length && <View className="projectTab">
+          <Navigator className="project-Title" hoverClass="none" url="/pages/spaceCustomization/spaceCustomization">
+            <Text>空间定制</Text>
+            <Image lazyLoad className="on" mode="aspectFill" src={m8}></Image>
+          </Navigator>
+          <TabSwiper data={goodlist} />
+          {/* <wuc-tab textFlex backgroundColor="#fff" bind:__l="__l" bind:updateTabCur="__e" data-event-opts="{{[ [ '^updateTabCur',[ [ '__set_sync',['$0','TabCur','$event'],[''] ] ] ],[ '^updateTabCur',[ [ '__set_sync',['$0','TabCur','$event'],[''] ] ] ] ]}}" fontColor="#333" selectBottom="10rpx" selectColor="#E92124" selectwidth="30rpx" tabList="{{tabList}}" tabCur="{{TabCur}}" vueId="1"></wuc-tab>
         <swiper bindchange="__e" circular="{{true}}" className="swiper" current="{{TabCur}}" data-event-opts="{{[ [ 'change',[ [ 'swiperChange',['$event'] ] ] ] ]}}" duration="300" indicatorActiveColor="rgba(255,255,255,0)" indicatorColor="rgba(255,255,255,0)">
           <swiper-item wx:for="{{spaceList}}" wx:key="index">
             <Navigator className="Navigator-hover" hoverClass="none" url="{{'/pagesB/spaceInfo/spaceInfo?goodsId='+item.goodsId}}">
@@ -165,7 +202,7 @@ export default function Index() {
             </Navigator>
           </swiper-item>
         </swiper> */}
-      </View>
+        </View>
       }
       <View className="house-ruzhu">
         <Navigator className="project-Title" hoverClass="none" url="/pages/housing/housing">

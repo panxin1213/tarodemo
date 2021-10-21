@@ -11,7 +11,7 @@ export default function Typegood(props) {
             const arr: any = data && data.length ? data.map((a: any) => {
                 return {
                     title: a.title, element: (<Swiper3D data={a.data.map((b: any) => {
-                        return { img: b.imageUrl, url: `/pagesB/houseInfo/houseInfo?goodsId=${b.goodsId}` };
+                        return { img: b.imageUrl, url: `/pages/spaceInfo/index?id=${b.goodsId}` };
                     })} />)
                 };
             }) : [];
